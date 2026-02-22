@@ -1,0 +1,167 @@
+{
+  "title": "小微生态门户-文档详情",
+  "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f808311a277f4a099a5d5bfa72b0656a",
+  "bodyClasses": "",
+  "sidebar": [
+    {
+      "text": "创建应用",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=eb5f1404d9dd11ed8e36016f0b230280&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "申请沙箱环境",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=94258fafd9de11edbfb2c7da3836a943&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "获取授权信息",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=9d5e184dd9de11ed8e3697d4973ff91a&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "access_token",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=9bd40f8fda9d11edbfb2bf125f1b3e41&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "主动获取授权",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=801d558dda9d11edbfb2d572de04f9ce&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "创建应用",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=eb5f1404d9dd11ed8e36016f0b230280&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "申请沙箱环境",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=94258fafd9de11edbfb2c7da3836a943&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "获取授权信息",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=9d5e184dd9de11ed8e3697d4973ff91a&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "access_token",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=9bd40f8fda9d11edbfb2bf125f1b3e41&noside=true",
+      "classes": ""
+    },
+    {
+      "text": "主动获取授权",
+      "href": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=801d558dda9d11edbfb2d572de04f9ce&noside=true",
+      "classes": ""
+    }
+  ],
+  "content": [
+    {
+      "tag": "div",
+      "class": "sidebar",
+      "id": "",
+      "childCount": 2,
+      "text": "目录 \n        展开 指导文档 开发指南 headers参数 隐私数据解密 购货 购货订单 购货订单查询 购货订单新增 购货订单修改 购货订单删除 购货单 购货入库单查询 购货入库单新增 购货"
+    },
+    {
+      "tag": "div",
+      "class": "sidebar-top",
+      "id": "",
+      "childCount": 2,
+      "text": "目录 \n        展开"
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": "指导文档 开发指南 headers参数 隐私数据解密 购货 购货订单 购货订单查询 购货订单新增 购货订单修改 购货订单删除 购货单 购货入库单查询 购货入库单新增 购货入库单修改 购货入库单删除 购"
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": "开发指南 headers参数 隐私数据解密"
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": ""
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": ""
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": ""
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": "购货订单 购货订单查询 购货订单新增 购货订单修改 购货订单删除 购货单 购货入库单查询 购货入库单新增 购货入库单修改 购货入库单删除 购货退货单 购货退货单查询 购货退货单新增 购货退货单修改 购"
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": "购货订单查询 购货订单新增 购货订单修改 购货订单删除"
+    },
+    {
+      "tag": "section",
+      "class": "menutree",
+      "id": "",
+      "childCount": 1,
+      "text": ""
+    }
+  ],
+  "selectors": [
+    {
+      "depth": 1,
+      "tag": "div#app",
+      "childCount": 1,
+      "text": "首页\n            \n            集成方案\n            \n            AP..."
+    },
+    {
+      "depth": 2,
+      "tag": "section.web-master",
+      "childCount": 2,
+      "text": "首页\n            \n            集成方案\n            \n            AP..."
+    },
+    {
+      "depth": 3,
+      "tag": "header.center",
+      "childCount": 1,
+      "text": "首页\n            \n            集成方案\n            \n            AP..."
+    },
+    {
+      "depth": 4,
+      "tag": "section.head-section",
+      "childCount": 2,
+      "text": "首页\n            \n            集成方案\n            \n            AP..."
+    },
+    {
+      "depth": 3,
+      "tag": "div.container",
+      "childCount": 2,
+      "text": "首页 文档详情    目录 \n        展开 指导文档 开发指南 headers参数 隐私数据解密 购货 购货订单..."
+    },
+    {
+      "depth": 4,
+      "tag": "div#center.center",
+      "childCount": 1,
+      "text": "开发指南 更新于2023-05-30 09:28 复制链接    一级标题 二级标题 三级标题 四级标题 五级标题 六级..."
+    }
+  ]
+}
