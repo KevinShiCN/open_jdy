@@ -1,7 +1,7 @@
 {
   "name": "open-jdy",
   "version": "1.0.0",
-  "description": "金蝶云·精斗云进销存开放平台 API 文档本地镜像",
+  "description": "金蝶开放平台 API 文档本地镜像（精斗云 + 金蝶云星辰）",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -10,7 +10,12 @@
     "extract-nav": "node scripts/extract-nav.mjs",
     "crawl": "node scripts/crawl.mjs",
     "gen-index": "node scripts/gen-index.mjs",
-    "update": "node scripts/extract-nav.mjs && node scripts/crawl.mjs && node scripts/gen-index.mjs"
+    "update": "node scripts/extract-nav.mjs && node scripts/crawl.mjs && node scripts/gen-index.mjs",
+    "extract-nav-yxc": "node scripts/extract-nav-yxc.mjs",
+    "crawl-yxc": "node scripts/crawl-yxc.mjs",
+    "gen-index-all": "node scripts/gen-index-all.mjs",
+    "update-yxc": "node scripts/extract-nav-yxc.mjs && node scripts/crawl-yxc.mjs && node scripts/gen-index-all.mjs",
+    "update-all": "npm run update && npm run update-yxc"
   },
   "keywords": [
     "kingdee",
