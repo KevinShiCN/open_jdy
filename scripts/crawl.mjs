@@ -7,15 +7,24 @@
  */
 import { chromium } from 'playwright';
 import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
+import { createHash } from 'crypto';
 import { dirname, join } from 'path';
 
 const DOCS_DIR = join(import.meta.dirname, '..', 'docs');
 const META_DIR = join(import.meta.dirname, '..', '_meta');
 const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '2');
 const CATEGORY_FILTER = process.argv.find((_, i, a) => a[i-1] === '--category') || '';
-const SKIP_EXISTING = !process.argv.includes('--force');
+const FORCE_WRITE = process.argv.includes('--force');
+const QUICK_SKIP = process.argv.includes('--quick');
 const MAX_RETRIES = 2;
 const DELAY_MS = 800;
+const CONSECUTIVE_FAIL_LIMIT = 5;
+
+// 内容哈希（排除 crawl_date，避免每次爬取都产生差异）
+function contentHash(text) {
+  const normalized = text.replace(/^crawl_date:.*$/m, '');
+  return createHash('sha256').update(normalized).digest('hex');
+}
 
 /** 浏览器端：DOM → Markdown */
 function extractPageContent() {
@@ -112,20 +121,21 @@ function buildPath(task) {
   return join(...parts, task.file + '.md');
 }
 
-/** 爬取单个页面（带重试） */
+/** 爬取单个页面（带重试 + 哈希比对） */
 async function crawlPage(page, task) {
   const url = task.url;
   const outPath = buildPath(task);
+  const fileExists = existsSync(outPath);
 
-  if (SKIP_EXISTING && existsSync(outPath)) {
-    return { ok: true, title: task.file, path: outPath, skipped: true };
+  // --quick: 文件存在就跳过（不访问网络，快速增量）
+  if (QUICK_SKIP && fileExists) {
+    return { ok: true, title: task.file, path: outPath, status: 'skip' };
   }
 
   for (let attempt = 0; attempt <= MAX_RETRIES; attempt++) {
     try {
       if (attempt > 0) await new Promise(r => setTimeout(r, 2000 * attempt));
       await page.goto(url, { waitUntil: 'networkidle', timeout: 45000 });
-      // 等待内容区加载
       await page.waitForSelector('#center', { timeout: 15000 });
       await page.waitForTimeout(1500);
 
@@ -144,12 +154,21 @@ async function crawlPage(page, task) {
       md += `> 分类：${task.pathLabel}\n\n`;
       md += result.content.replace(/\n{3,}/g, '\n\n').trim() + '\n';
 
+      // 哈希比对：内容无变化时跳过写入
+      if (!FORCE_WRITE && fileExists) {
+        const newHash = contentHash(md);
+        const oldHash = contentHash(readFileSync(outPath, 'utf-8'));
+        if (newHash === oldHash) {
+          return { ok: true, title: result.title || task.title, path: outPath, status: 'unchanged' };
+        }
+      }
+
       mkdirSync(dirname(outPath), { recursive: true });
       writeFileSync(outPath, md, 'utf-8');
-      return { ok: true, title: result.title || task.title, path: outPath };
+      return { ok: true, title: result.title || task.title, path: outPath, status: fileExists ? 'updated' : 'new' };
     } catch (err) {
       if (attempt === MAX_RETRIES) {
-        return { ok: false, url, error: err.message, path: outPath };
+        return { ok: false, url, error: err.message, path: outPath, status: 'fail' };
       }
     }
   }
@@ -163,15 +182,26 @@ async function runPool(tasks, browser, concurrency) {
   for (let i = 0; i < concurrency; i++) {
     pages.push(await browser.newPage());
   }
+  let consecutiveFails = 0;
+  let aborted = false;
   async function worker(page) {
-    while (idx < tasks.length) {
+    while (idx < tasks.length && !aborted) {
       const task = tasks[idx++];
       const n = idx;
       const r = await crawlPage(page, task);
-      if (r.skipped) console.log(`[${n}/${tasks.length}] SKIP: ${task.file}`);
-      else if (r.ok) console.log(`[${n}/${tasks.length}] OK: ${task.file}`);
-      else console.log(`[${n}/${tasks.length}] FAIL: ${task.file} - ${r.error}`);
+      const tag = { skip: 'SKIP', unchanged: 'SAME', updated: 'UPDATE', new: 'NEW', fail: 'FAIL' }[r.status] || '??';
+      console.log(`[${n}/${tasks.length}] ${tag}: ${task.file}${r.status === 'fail' ? ' - ' + r.error : ''}`);
       results.push({ ...task, ...r });
+      if (r.status === 'fail') {
+        consecutiveFails++;
+        if (consecutiveFails >= CONSECUTIVE_FAIL_LIMIT) {
+          console.error(`\n⚠️ 连续 ${consecutiveFails} 次失败，疑似风控，自动停止`);
+          aborted = true;
+          break;
+        }
+      } else {
+        consecutiveFails = 0;
+      }
       await new Promise(r => setTimeout(r, DELAY_MS));
     }
   }
@@ -186,16 +216,16 @@ async function main() {
   if (CATEGORY_FILTER) {
     tasks = tasks.filter(t => t.category === CATEGORY_FILTER);
   }
-  console.log(`Total: ${tasks.length}, Concurrency: ${CONCURRENCY}, SkipExisting: ${SKIP_EXISTING}`);
+  console.log(`Total: ${tasks.length}, Concurrency: ${CONCURRENCY}, Mode: ${FORCE_WRITE ? 'force' : QUICK_SKIP ? 'quick' : 'smart'}`);
 
   const browser = await chromium.launch({ headless: false });
   const results = await runPool(tasks, browser, CONCURRENCY);
   await browser.close();
 
-  const ok = results.filter(r => r.ok).length;
-  const skipped = results.filter(r => r.skipped).length;
+  const stats = { new: 0, updated: 0, unchanged: 0, skip: 0, fail: 0 };
+  for (const r of results) stats[r.status] = (stats[r.status] || 0) + 1;
   const fail = results.filter(r => !r.ok);
-  console.log(`\nDone: ${ok} success (${skipped} skipped), ${fail.length} failed`);
+  console.log(`\nDone: ${stats.new} new, ${stats.updated} updated, ${stats.unchanged} unchanged, ${stats.skip} skipped, ${stats.fail} failed`);
 
   if (fail.length > 0) {
     writeFileSync(join(META_DIR, 'crawl-failures.json'), JSON.stringify(fail, null, 2));
@@ -204,14 +234,13 @@ async function main() {
 
   const report = {
     date: new Date().toISOString(),
-    total: tasks.length, success: ok, skipped, failed: fail.length,
+    total: tasks.length, stats,
     categories: {},
   };
   for (const r of results) {
-    if (!report.categories[r.category]) report.categories[r.category] = { total: 0, ok: 0, fail: 0 };
+    if (!report.categories[r.category]) report.categories[r.category] = { total: 0, new: 0, updated: 0, unchanged: 0, skip: 0, fail: 0 };
     report.categories[r.category].total++;
-    if (r.ok) report.categories[r.category].ok++;
-    else report.categories[r.category].fail++;
+    report.categories[r.category][r.status] = (report.categories[r.category][r.status] || 0) + 1;
   }
   writeFileSync(join(META_DIR, 'crawl-report.json'), JSON.stringify(report, null, 2));
 }
