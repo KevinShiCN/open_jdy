@@ -3,7 +3,7 @@ title: "headers参数 更新于2023-04-15 18:05 复制链接"
 category: "指导文档 > headers参数"
 source: "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=391b87b075fb11edb79183b17ac8ddcc"
 last_update: "2023-04-15 18:05"
-crawl_date: "2026-03-03"
+crawl_date: "2026-03-10"
 ---
 
 # headers参数 更新于2023-04-15 18:05 复制链接
