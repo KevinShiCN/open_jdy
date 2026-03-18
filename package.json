@@ -15,7 +15,10 @@
     "crawl-yxc": "node scripts/crawl-yxc.mjs",
     "gen-index-all": "node scripts/gen-index-all.mjs",
     "update-yxc": "node scripts/extract-nav-yxc.mjs && node scripts/crawl-yxc.mjs && node scripts/gen-index-all.mjs",
-    "update-all": "npm run update && npm run update-yxc"
+    "update-all": "npm run update && npm run update-yxc",
+    "scrape-kb": "node scripts/scrape-knowledge.mjs",
+    "scrape-kb:list": "node scripts/scrape-knowledge.mjs --list-only",
+    "scrape-kb:resume": "node scripts/scrape-knowledge.mjs --resume"
   },
   "keywords": [
     "kingdee",
