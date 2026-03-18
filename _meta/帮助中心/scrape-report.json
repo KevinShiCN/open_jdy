@@ -1,0 +1,132 @@
+{
+  "date": "2026-03-18T14:24:21.620Z",
+  "totalArticles": 15965,
+  "stats": {
+    "saved": 15750,
+    "exists": 32,
+    "skip": 0,
+    "unchanged": 0,
+    "empty": 183,
+    "fail": 0
+  },
+  "failures": [],
+  "aborted": false,
+  "categories": [
+    {
+      "name": "采购管理",
+      "count": 1143
+    },
+    {
+      "name": "销售管理",
+      "count": 1672
+    },
+    {
+      "name": "账务处理",
+      "count": 1283
+    },
+    {
+      "name": "财务报表",
+      "count": 407
+    },
+    {
+      "name": "资产管理",
+      "count": 376
+    },
+    {
+      "name": "基础资料",
+      "count": 1599
+    },
+    {
+      "name": "系统设置",
+      "count": 1563
+    },
+    {
+      "name": "库存管理",
+      "count": 1222
+    },
+    {
+      "name": "客户经营",
+      "count": 178
+    },
+    {
+      "name": "移动应用",
+      "count": 638
+    },
+    {
+      "name": "轻分析",
+      "count": 50
+    },
+    {
+      "name": "应收应付",
+      "count": 938
+    },
+    {
+      "name": "零售资料",
+      "count": 211
+    },
+    {
+      "name": "门店管理",
+      "count": 575
+    },
+    {
+      "name": "会员管理",
+      "count": 100
+    },
+    {
+      "name": "门店营销",
+      "count": 97
+    },
+    {
+      "name": "门店商城",
+      "count": 84
+    },
+    {
+      "name": "订货商城",
+      "count": 680
+    },
+    {
+      "name": "出纳管理",
+      "count": 271
+    },
+    {
+      "name": "税务管理",
+      "count": 259
+    },
+    {
+      "name": "生产管理",
+      "count": 1063
+    },
+    {
+      "name": "受托加工",
+      "count": 149
+    },
+    {
+      "name": "委外管理",
+      "count": 287
+    },
+    {
+      "name": "工资管理",
+      "count": 98
+    },
+    {
+      "name": "帮助手册",
+      "count": 30
+    },
+    {
+      "name": "行业解决方案",
+      "count": 8
+    },
+    {
+      "name": "公共类知识",
+      "count": 683
+    },
+    {
+      "name": "费用报销",
+      "count": 275
+    },
+    {
+      "name": "POS云",
+      "count": 26
+    }
+  ]
+}
