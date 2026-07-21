@@ -1,7 +1,7 @@
 {
   "name": "open-jdy",
   "version": "1.0.0",
-  "description": "金蝶开放平台 API 文档本地镜像（精斗云 + 金蝶云星辰）",
+  "description": "金蝶开放平台 API 文档本地镜像（金蝶云进销存 + 金蝶云星辰）",
   "main": "index.js",
   "directories": {
     "doc": "docs"
@@ -12,9 +12,11 @@
     "gen-index": "node scripts/gen-index.mjs",
     "update": "node scripts/extract-nav.mjs && node scripts/crawl.mjs && node scripts/gen-index.mjs",
     "extract-nav-yxc": "node scripts/extract-nav-yxc.mjs",
+    "extract-nav-yxc:resume": "node scripts/extract-nav-yxc.mjs --resume",
     "crawl-yxc": "node scripts/crawl-yxc.mjs",
     "gen-index-all": "node scripts/gen-index-all.mjs",
-    "update-yxc": "node scripts/extract-nav-yxc.mjs && node scripts/crawl-yxc.mjs && node scripts/gen-index-all.mjs",
+    "verify": "node scripts/verify.mjs",
+    "update-yxc": "node scripts/extract-nav-yxc.mjs && node scripts/crawl-yxc.mjs --concurrency 1 && node scripts/gen-index-all.mjs && node scripts/verify.mjs",
     "update-all": "npm run update && npm run update-yxc",
     "scrape-kb": "node scripts/scrape-knowledge.mjs",
     "scrape-kb:list": "node scripts/scrape-knowledge.mjs --list-only",

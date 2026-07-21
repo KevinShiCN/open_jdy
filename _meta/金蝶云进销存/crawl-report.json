@@ -1,0 +1,77 @@
+{
+  "date": "2026-04-15T13:06:41.594Z",
+  "total": 168,
+  "stats": {
+    "new": 0,
+    "updated": 1,
+    "unchanged": 167,
+    "skip": 0,
+    "fail": 0
+  },
+  "categories": {
+    "指导文档": {
+      "total": 3,
+      "new": 0,
+      "updated": 1,
+      "unchanged": 2,
+      "skip": 0,
+      "fail": 0
+    },
+    "购货": {
+      "total": 12,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 12,
+      "skip": 0,
+      "fail": 0
+    },
+    "销货": {
+      "total": 17,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 17,
+      "skip": 0,
+      "fail": 0
+    },
+    "仓库": {
+      "total": 46,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 46,
+      "skip": 0,
+      "fail": 0
+    },
+    "客户经营": {
+      "total": 4,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 4,
+      "skip": 0,
+      "fail": 0
+    },
+    "资金": {
+      "total": 23,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 23,
+      "skip": 0,
+      "fail": 0
+    },
+    "资料": {
+      "total": 50,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 50,
+      "skip": 0,
+      "fail": 0
+    },
+    "设置": {
+      "total": 13,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 13,
+      "skip": 0,
+      "fail": 0
+    }
+  }
+}

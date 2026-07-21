@@ -1,0 +1,2989 @@
+{
+  "tree": [
+    {
+      "text": "指导文档",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "开发指南",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "headers参数",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "隐私数据解密",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
+      "text": "购货",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "购货订单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "购货订单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货订单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货订单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货订单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "购货单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "购货入库单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货入库单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货入库单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货入库单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "购货退货单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "购货退货单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货退货单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货退货单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "购货退货单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "销货",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "销货订单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "销货订单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货订单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货订单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货订单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货订单锁定",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货订单关闭",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "销货单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "销货单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "现金收款",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "扫码收款",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "抵扣预收款源单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "销货退货单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "销货退货单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货退货单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货退货单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "销货退货单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "仓库",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "商品库存余额表",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "批次保质期清单",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "商品库存余额表V2",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "成本计算",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "其他入库单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "其他入库单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他入库单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他入库单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他入库单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "其他出库单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "其他出库单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他出库单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他出库单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他出库单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "调拨订单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "调拨订单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨订单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨订单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨订单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨订单详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "调拨单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "调拨单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "调拨单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "组装单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "组装单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装单详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "拆卸单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "拆卸单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸单详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "组装订单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "组装订单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装订单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装订单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装订单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装订单详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "拆卸订单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "拆卸订单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸订单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸订单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸订单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "拆卸订单详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "组装拆卸模板",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "组装拆卸模板新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装拆卸模板删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装拆卸模板修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装拆卸模板查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "组装拆卸模板详情",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "客户经营",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "推荐商品清单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "推荐商品清单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "推荐商品清单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "推荐商品清单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "推荐商品清单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "资金",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "在线收款明细查询",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "收款单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "预收款单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "收款单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "收款单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "收款单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "收款单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "付款单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "付款单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "付款单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "付款单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "付款单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "核销单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "核销单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "核销单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "核销单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "核销单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "核销源单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "其他收入单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "其他收入单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他收入单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他收入单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他收入单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "其他支出单",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "其他支出单查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他支出单新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他支出单修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "其他支出单删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "资料",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "客户",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "客户查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户分类查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户分类新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户分类修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "客户分类删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "供应商",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "供应商查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "供应商新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "供应商修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "供应商删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "商品",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "商品查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品类别查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品类别新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品类别修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品类别删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品价格策略",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "商品条码",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "单位",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "单位查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "单位新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "单位修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "单位删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "客户物料编码",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "部门",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "项目",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "职员",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "职员查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "职员新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "职员修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "职员删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "账户",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "账户查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "账户新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "账户修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "账户删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "辅助属性",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "辅助属性查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "辅助属性新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "辅助属性删除",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "辅助属性分类查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "仓库",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "仓库查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "结算方式查询",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "货架",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "货架查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "线路定义",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "查询线路列表",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "新增线路",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "修改线路",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "删除线路",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "启用/禁用线路",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "设置默认/取消默认",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "text": "设置",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "批量换取新的预签名地址",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "支付通道配置",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "支付通道修改",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "支付通道新增",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "支付通道查询",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        },
+        {
+          "text": "系统参数",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "单据审批",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "自定义字段查询",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "自定义字段新增",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "在线打印设置",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "获取打印模板列表",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "获取打印数据",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "获取云打印设备列表",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "创建云打印任务",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            },
+            {
+              "text": "获取云打印记录列表",
+              "isParent": false,
+              "isLeaf": true,
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "pages": [
+    {
+      "path": [
+        "指导文档",
+        "开发指南"
+      ],
+      "category": "指导文档",
+      "title": "开发指南",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f808311a277f4a099a5d5bfa72b0656a"
+    },
+    {
+      "path": [
+        "指导文档",
+        "headers参数"
+      ],
+      "category": "指导文档",
+      "title": "headers参数",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=391b87b075fb11edb79183b17ac8ddcc"
+    },
+    {
+      "path": [
+        "指导文档",
+        "隐私数据解密"
+      ],
+      "category": "指导文档",
+      "title": "隐私数据解密",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4d8a2babe75211ef9c57b57396b0d6ac"
+    },
+    {
+      "path": [
+        "购货",
+        "购货订单",
+        "购货订单查询"
+      ],
+      "category": "购货 > 购货订单",
+      "title": "购货订单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b9b50baa93f24abfafbbdab58827221f"
+    },
+    {
+      "path": [
+        "购货",
+        "购货订单",
+        "购货订单新增"
+      ],
+      "category": "购货 > 购货订单",
+      "title": "购货订单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9d716b070627421793a05207e1120eba"
+    },
+    {
+      "path": [
+        "购货",
+        "购货订单",
+        "购货订单修改"
+      ],
+      "category": "购货 > 购货订单",
+      "title": "购货订单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=6a52b8fb3ed14855b77f7b9c41f89b32"
+    },
+    {
+      "path": [
+        "购货",
+        "购货订单",
+        "购货订单删除"
+      ],
+      "category": "购货 > 购货订单",
+      "title": "购货订单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=580e7c42331d4cdcbf9b96db6dc9b082"
+    },
+    {
+      "path": [
+        "购货",
+        "购货单",
+        "购货入库单查询"
+      ],
+      "category": "购货 > 购货单",
+      "title": "购货入库单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=a0b730c1c0c442c4ac2d51c075db32c6"
+    },
+    {
+      "path": [
+        "购货",
+        "购货单",
+        "购货入库单新增"
+      ],
+      "category": "购货 > 购货单",
+      "title": "购货入库单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7740d63a4a094e4d8342db1ee40e0324"
+    },
+    {
+      "path": [
+        "购货",
+        "购货单",
+        "购货入库单修改"
+      ],
+      "category": "购货 > 购货单",
+      "title": "购货入库单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=0ffd6670cb2f4ec0a672bdd7e261507c"
+    },
+    {
+      "path": [
+        "购货",
+        "购货单",
+        "购货入库单删除"
+      ],
+      "category": "购货 > 购货单",
+      "title": "购货入库单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=a920c592a1184659bd9697169957d392"
+    },
+    {
+      "path": [
+        "购货",
+        "购货退货单",
+        "购货退货单查询"
+      ],
+      "category": "购货 > 购货退货单",
+      "title": "购货退货单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e2034e1d77814be9a51b97e3b3612149"
+    },
+    {
+      "path": [
+        "购货",
+        "购货退货单",
+        "购货退货单新增"
+      ],
+      "category": "购货 > 购货退货单",
+      "title": "购货退货单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7fe3bd7a4ddd4e03b2a94d8a4f84cdbf"
+    },
+    {
+      "path": [
+        "购货",
+        "购货退货单",
+        "购货退货单修改"
+      ],
+      "category": "购货 > 购货退货单",
+      "title": "购货退货单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=14705ce7da8644978dfaa9984c8c3a85"
+    },
+    {
+      "path": [
+        "购货",
+        "购货退货单",
+        "购货退货单删除"
+      ],
+      "category": "购货 > 购货退货单",
+      "title": "购货退货单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7bba50d678e045f984185c2ffef0d318"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单查询"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3a3a37ae415a41ab8b696d90ec751c2a"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单新增"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ecc251f9e3a3478581c7c7910da91d83"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单修改"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=08aaf404df4b4a41861c7cf2ccdba016"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单删除"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5883afe9ac18465fab3bd357f00dc2e3"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单锁定"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单锁定",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=2c4989cc11b24acaa81a69f8b2df8e1c"
+    },
+    {
+      "path": [
+        "销货",
+        "销货订单",
+        "销货订单关闭"
+      ],
+      "category": "销货 > 销货订单",
+      "title": "销货订单关闭",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=790a3bf6c5d44bc8801153dabdbe2cb0"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "销货单查询"
+      ],
+      "category": "销货 > 销货单",
+      "title": "销货单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=38aefc93e37245af98f9047d16ad904e"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "销货单新增"
+      ],
+      "category": "销货 > 销货单",
+      "title": "销货单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=04239eb1fb0644229810923bca1d3c73"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "销货单修改"
+      ],
+      "category": "销货 > 销货单",
+      "title": "销货单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f2db913cc1e349039b59aafe45f3402a"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "销货单删除"
+      ],
+      "category": "销货 > 销货单",
+      "title": "销货单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4e4c745c46a04474b10ef56cac631b63"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "现金收款"
+      ],
+      "category": "销货 > 销货单",
+      "title": "现金收款",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=84b51dd105dc11eeb082756087cffb9c"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "扫码收款"
+      ],
+      "category": "销货 > 销货单",
+      "title": "扫码收款",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b612721205dc11eeb082dd7e4ffab26c"
+    },
+    {
+      "path": [
+        "销货",
+        "销货单",
+        "抵扣预收款源单查询"
+      ],
+      "category": "销货 > 销货单",
+      "title": "抵扣预收款源单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=a78e7b2de74b11ee8bba7b530f556483"
+    },
+    {
+      "path": [
+        "销货",
+        "销货退货单",
+        "销货退货单查询"
+      ],
+      "category": "销货 > 销货退货单",
+      "title": "销货退货单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8df8720e6c3c456aa23d74281aec6da3"
+    },
+    {
+      "path": [
+        "销货",
+        "销货退货单",
+        "销货退货单新增"
+      ],
+      "category": "销货 > 销货退货单",
+      "title": "销货退货单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=2e23e5e1dd444e7a8bb88841b96c5ec2"
+    },
+    {
+      "path": [
+        "销货",
+        "销货退货单",
+        "销货退货单修改"
+      ],
+      "category": "销货 > 销货退货单",
+      "title": "销货退货单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5ef5ae8b873646f6b1d45323f16464a7"
+    },
+    {
+      "path": [
+        "销货",
+        "销货退货单",
+        "销货退货单删除"
+      ],
+      "category": "销货 > 销货退货单",
+      "title": "销货退货单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8348179289654d8c8c35ffe88c9db545"
+    },
+    {
+      "path": [
+        "仓库",
+        "商品库存余额表"
+      ],
+      "category": "仓库",
+      "title": "商品库存余额表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d38b6a2ee74e4f06af400039a467c334"
+    },
+    {
+      "path": [
+        "仓库",
+        "批次保质期清单"
+      ],
+      "category": "仓库",
+      "title": "批次保质期清单",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=85f7d55623d949869a0c0a8c44d0052c"
+    },
+    {
+      "path": [
+        "仓库",
+        "商品库存余额表V2"
+      ],
+      "category": "仓库",
+      "title": "商品库存余额表V2",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=93b93c93507511ee9fb791dac6734777"
+    },
+    {
+      "path": [
+        "仓库",
+        "成本计算"
+      ],
+      "category": "仓库",
+      "title": "成本计算",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1eb3a3a9c5af42e18a788b696405c094"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他入库单",
+        "其他入库单查询"
+      ],
+      "category": "仓库 > 其他入库单",
+      "title": "其他入库单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8939588623c3464c9f5948d266fe9b80"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他入库单",
+        "其他入库单新增"
+      ],
+      "category": "仓库 > 其他入库单",
+      "title": "其他入库单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=330770515aca42be9092911118ab9082"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他入库单",
+        "其他入库单修改"
+      ],
+      "category": "仓库 > 其他入库单",
+      "title": "其他入库单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e589f6e522e743a19a6499695f09d611"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他入库单",
+        "其他入库单删除"
+      ],
+      "category": "仓库 > 其他入库单",
+      "title": "其他入库单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=592eb6d0350e4cf19793a330c7bb7bb1"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他出库单",
+        "其他出库单查询"
+      ],
+      "category": "仓库 > 其他出库单",
+      "title": "其他出库单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1116f4665dab4e9fa5f85cd87441eb9e"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他出库单",
+        "其他出库单新增"
+      ],
+      "category": "仓库 > 其他出库单",
+      "title": "其他出库单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=55b2f2ae12a04ab08d6a343bb8a18f17"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他出库单",
+        "其他出库单修改"
+      ],
+      "category": "仓库 > 其他出库单",
+      "title": "其他出库单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1411a6435add481a9cb19bb6034fa1f2"
+    },
+    {
+      "path": [
+        "仓库",
+        "其他出库单",
+        "其他出库单删除"
+      ],
+      "category": "仓库 > 其他出库单",
+      "title": "其他出库单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d841fd54ff8642fdbd9c9b5a208e5fe7"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨订单",
+        "调拨订单新增"
+      ],
+      "category": "仓库 > 调拨订单",
+      "title": "调拨订单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=c8cd09a1aca011efadbde989ad0ed1cd"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨订单",
+        "调拨订单删除"
+      ],
+      "category": "仓库 > 调拨订单",
+      "title": "调拨订单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=cfff8983aca011efb1ad0b6cee465f85"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨订单",
+        "调拨订单修改"
+      ],
+      "category": "仓库 > 调拨订单",
+      "title": "调拨订单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d6af9292aca011efadbd4d4754fe1579"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨订单",
+        "调拨订单查询"
+      ],
+      "category": "仓库 > 调拨订单",
+      "title": "调拨订单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e9b431c3aca011efadbdc7f5d53326a4"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨订单",
+        "调拨订单详情"
+      ],
+      "category": "仓库 > 调拨订单",
+      "title": "调拨订单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f3137cb4aca011efb1ad09972b2bfab0"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨单",
+        "调拨单查询"
+      ],
+      "category": "仓库 > 调拨单",
+      "title": "调拨单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=c5adf29cdbeb46209aa2374abc1719f3"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨单",
+        "调拨单新增"
+      ],
+      "category": "仓库 > 调拨单",
+      "title": "调拨单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=14448083c90f4b399db3439620b76d19"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨单",
+        "调拨单修改"
+      ],
+      "category": "仓库 > 调拨单",
+      "title": "调拨单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e83e9316fa9548f89f26fe53857f5df7"
+    },
+    {
+      "path": [
+        "仓库",
+        "调拨单",
+        "调拨单删除"
+      ],
+      "category": "仓库 > 调拨单",
+      "title": "调拨单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ceb69018a99441beaed680a364552690"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装单",
+        "组装单新增"
+      ],
+      "category": "仓库 > 组装单",
+      "title": "组装单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4663921faca011efb1ad89a1ed6bc337"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装单",
+        "组装单删除"
+      ],
+      "category": "仓库 > 组装单",
+      "title": "组装单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4f0950afaca011efadbd370093333c9a"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装单",
+        "组装单修改"
+      ],
+      "category": "仓库 > 组装单",
+      "title": "组装单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=561fe420aca011efb1ada3529bb0f888"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装单",
+        "组装单查询"
+      ],
+      "category": "仓库 > 组装单",
+      "title": "组装单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5d305cb0aca011efadbd0f3bf2420b32"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装单",
+        "组装单详情"
+      ],
+      "category": "仓库 > 组装单",
+      "title": "组装单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=62ccac31aca011efb1ad253e53b507e8"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸单",
+        "拆卸单新增"
+      ],
+      "category": "仓库 > 拆卸单",
+      "title": "拆卸单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=00133c2daca011efb1ad270b073da68f"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸单",
+        "拆卸单删除"
+      ],
+      "category": "仓库 > 拆卸单",
+      "title": "拆卸单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=0da9c7ccaca011efadbd2d4802e1cf5b"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸单",
+        "拆卸单修改"
+      ],
+      "category": "仓库 > 拆卸单",
+      "title": "拆卸单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=2916325daca011efadbdcb2282ec8dc3"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸单",
+        "拆卸单查询"
+      ],
+      "category": "仓库 > 拆卸单",
+      "title": "拆卸单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3090699eaca011efb1adc55555a90bd4"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸单",
+        "拆卸单详情"
+      ],
+      "category": "仓库 > 拆卸单",
+      "title": "拆卸单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3773909eaca011efadbdd120910ed2c9"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装订单",
+        "组装订单新增"
+      ],
+      "category": "仓库 > 组装订单",
+      "title": "组装订单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=925c88daac9f11efb1ad4736c4f9c5d5"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装订单",
+        "组装订单删除"
+      ],
+      "category": "仓库 > 组装订单",
+      "title": "组装订单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=c8c1dbabac9f11efb1adb3fc196afc47"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装订单",
+        "组装订单修改"
+      ],
+      "category": "仓库 > 组装订单",
+      "title": "组装订单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d1a69f3cac9f11efb1add9046bcc0ec4"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装订单",
+        "组装订单查询"
+      ],
+      "category": "仓库 > 组装订单",
+      "title": "组装订单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d8f950eaac9f11efadbdcfe40670127e"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装订单",
+        "组装订单详情"
+      ],
+      "category": "仓库 > 组装订单",
+      "title": "组装订单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e02dcc6bac9f11efadbd9f49b8bbcaa0"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸订单",
+        "拆卸订单新增"
+      ],
+      "category": "仓库 > 拆卸订单",
+      "title": "拆卸订单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5170f746ac9f11efadbdd99e7b5c8938"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸订单",
+        "拆卸订单删除"
+      ],
+      "category": "仓库 > 拆卸订单",
+      "title": "拆卸订单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=6280f267ac9f11efadbd03d11866e261"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸订单",
+        "拆卸订单修改"
+      ],
+      "category": "仓库 > 拆卸订单",
+      "title": "拆卸订单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=6b737198ac9f11efadbd8d47b6ea6f3b"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸订单",
+        "拆卸订单查询"
+      ],
+      "category": "仓库 > 拆卸订单",
+      "title": "拆卸订单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=71ecb399ac9f11efb1adf96f12993f48"
+    },
+    {
+      "path": [
+        "仓库",
+        "拆卸订单",
+        "拆卸订单详情"
+      ],
+      "category": "仓库 > 拆卸订单",
+      "title": "拆卸订单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7b7e0aa9ac9f11efadbdab7e35ee12b2"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装拆卸模板",
+        "组装拆卸模板新增"
+      ],
+      "category": "仓库 > 组装拆卸模板",
+      "title": "组装拆卸模板新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=47df3263ac9c11efb1ad23d586293716"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装拆卸模板",
+        "组装拆卸模板删除"
+      ],
+      "category": "仓库 > 组装拆卸模板",
+      "title": "组装拆卸模板删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=c0ff0a03ac9c11efadbd2b2e1222adf3"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装拆卸模板",
+        "组装拆卸模板修改"
+      ],
+      "category": "仓库 > 组装拆卸模板",
+      "title": "组装拆卸模板修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d29aca94ac9c11efb1ad291c02d6b54c"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装拆卸模板",
+        "组装拆卸模板查询"
+      ],
+      "category": "仓库 > 组装拆卸模板",
+      "title": "组装拆卸模板查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e049e775ac9c11efb1adc98aceed597e"
+    },
+    {
+      "path": [
+        "仓库",
+        "组装拆卸模板",
+        "组装拆卸模板详情"
+      ],
+      "category": "仓库 > 组装拆卸模板",
+      "title": "组装拆卸模板详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e7182716ac9c11efb1adc9a7bf9aa34b"
+    },
+    {
+      "path": [
+        "客户经营",
+        "推荐商品清单",
+        "推荐商品清单新增"
+      ],
+      "category": "客户经营 > 推荐商品清单",
+      "title": "推荐商品清单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=cd3d6a06aca511efb1add3ff9ffd145b"
+    },
+    {
+      "path": [
+        "客户经营",
+        "推荐商品清单",
+        "推荐商品清单删除"
+      ],
+      "category": "客户经营 > 推荐商品清单",
+      "title": "推荐商品清单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d6b2ad95aca511efadbd0335ec05440c"
+    },
+    {
+      "path": [
+        "客户经营",
+        "推荐商品清单",
+        "推荐商品清单修改"
+      ],
+      "category": "客户经营 > 推荐商品清单",
+      "title": "推荐商品清单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ddcebf16aca511efadbdedf60b8e1b84"
+    },
+    {
+      "path": [
+        "客户经营",
+        "推荐商品清单",
+        "推荐商品清单查询"
+      ],
+      "category": "客户经营 > 推荐商品清单",
+      "title": "推荐商品清单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e50dc217aca511efb1adebebd0903dae"
+    },
+    {
+      "path": [
+        "资金",
+        "在线收款明细查询"
+      ],
+      "category": "资金",
+      "title": "在线收款明细查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8bcc9681fb8b11ed8445fd4074760a1a"
+    },
+    {
+      "path": [
+        "资金",
+        "收款单",
+        "预收款单查询"
+      ],
+      "category": "资金 > 收款单",
+      "title": "预收款单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8bc00e20e69111eeaee3add130d54a18"
+    },
+    {
+      "path": [
+        "资金",
+        "收款单",
+        "收款单查询"
+      ],
+      "category": "资金 > 收款单",
+      "title": "收款单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f72986baf4e34992813e21fc12f094bd"
+    },
+    {
+      "path": [
+        "资金",
+        "收款单",
+        "收款单新增"
+      ],
+      "category": "资金 > 收款单",
+      "title": "收款单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3587f53b5f804ae69b037704b03c4932"
+    },
+    {
+      "path": [
+        "资金",
+        "收款单",
+        "收款单修改"
+      ],
+      "category": "资金 > 收款单",
+      "title": "收款单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=74159cff719a4434ad1b7076365a8fc7"
+    },
+    {
+      "path": [
+        "资金",
+        "收款单",
+        "收款单删除"
+      ],
+      "category": "资金 > 收款单",
+      "title": "收款单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4082e1b181ed4c22ac9252976f964753"
+    },
+    {
+      "path": [
+        "资金",
+        "付款单",
+        "付款单查询"
+      ],
+      "category": "资金 > 付款单",
+      "title": "付款单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9b4643c93ff84e0e8fd85ffd5e9619b8"
+    },
+    {
+      "path": [
+        "资金",
+        "付款单",
+        "付款单新增"
+      ],
+      "category": "资金 > 付款单",
+      "title": "付款单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ea6676a0a10a4c72a3ba1939036db05a"
+    },
+    {
+      "path": [
+        "资金",
+        "付款单",
+        "付款单修改"
+      ],
+      "category": "资金 > 付款单",
+      "title": "付款单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=2fb734d6a0b14e03a4b375d26c770708"
+    },
+    {
+      "path": [
+        "资金",
+        "付款单",
+        "付款单删除"
+      ],
+      "category": "资金 > 付款单",
+      "title": "付款单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=223cea96456049b38684de51a6b37cca"
+    },
+    {
+      "path": [
+        "资金",
+        "核销单",
+        "核销单查询"
+      ],
+      "category": "资金 > 核销单",
+      "title": "核销单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3cb1cf554511406aa6e5c19c7efbfc53"
+    },
+    {
+      "path": [
+        "资金",
+        "核销单",
+        "核销单新增"
+      ],
+      "category": "资金 > 核销单",
+      "title": "核销单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=bca48db5768d4d05a2c885c92b4e3534"
+    },
+    {
+      "path": [
+        "资金",
+        "核销单",
+        "核销单修改"
+      ],
+      "category": "资金 > 核销单",
+      "title": "核销单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=bddc083b4bd8432c86776530145fe334"
+    },
+    {
+      "path": [
+        "资金",
+        "核销单",
+        "核销单删除"
+      ],
+      "category": "资金 > 核销单",
+      "title": "核销单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=35cf76fd22e94ab7bcd2198528482e64"
+    },
+    {
+      "path": [
+        "资金",
+        "核销单",
+        "核销源单查询"
+      ],
+      "category": "资金 > 核销单",
+      "title": "核销源单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5e92976085ca48d9a01cbd4291adb764"
+    },
+    {
+      "path": [
+        "资金",
+        "其他收入单",
+        "其他收入单查询"
+      ],
+      "category": "资金 > 其他收入单",
+      "title": "其他收入单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b39a92e3658911eda5c8455db4e8e178"
+    },
+    {
+      "path": [
+        "资金",
+        "其他收入单",
+        "其他收入单新增"
+      ],
+      "category": "资金 > 其他收入单",
+      "title": "其他收入单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d82fcf7a1f714243832edad41e9e57e1"
+    },
+    {
+      "path": [
+        "资金",
+        "其他收入单",
+        "其他收入单修改"
+      ],
+      "category": "资金 > 其他收入单",
+      "title": "其他收入单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ffd60d34b3d5489296f668449f1c58ec"
+    },
+    {
+      "path": [
+        "资金",
+        "其他收入单",
+        "其他收入单删除"
+      ],
+      "category": "资金 > 其他收入单",
+      "title": "其他收入单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f9435c696a3f43c8b927620473ef2cda"
+    },
+    {
+      "path": [
+        "资金",
+        "其他支出单",
+        "其他支出单查询"
+      ],
+      "category": "资金 > 其他支出单",
+      "title": "其他支出单查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d8d6f99934db46cd870beaf0254f8799"
+    },
+    {
+      "path": [
+        "资金",
+        "其他支出单",
+        "其他支出单新增"
+      ],
+      "category": "资金 > 其他支出单",
+      "title": "其他支出单新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=2859bdc5658c11eda5c839470549ed5d"
+    },
+    {
+      "path": [
+        "资金",
+        "其他支出单",
+        "其他支出单修改"
+      ],
+      "category": "资金 > 其他支出单",
+      "title": "其他支出单修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=25910b66658d11eda5c84b5f51540011"
+    },
+    {
+      "path": [
+        "资金",
+        "其他支出单",
+        "其他支出单删除"
+      ],
+      "category": "资金 > 其他支出单",
+      "title": "其他支出单删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e5574867658d11eda5c8eba1131e226e"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户查询"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=78c288d1dab146e8a808eb1059fff1d2"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户新增"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7b4cd9162d394061a2937913c9660014"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户修改"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e28681549d5f495ca47559cc5d52b088"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户删除"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=726af6295fb14fa29424660064a055c8"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户分类查询"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户分类查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3c49396bc30940c7b1b640f6fd143785"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户分类新增"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户分类新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=78936d2ec66743ccac1c70237eb3e300"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户分类修改"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户分类修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1f63f109f9154c8c8475f66de0a20254"
+    },
+    {
+      "path": [
+        "资料",
+        "客户",
+        "客户分类删除"
+      ],
+      "category": "资料 > 客户",
+      "title": "客户分类删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8fa51a8423d941c180cc532b42dc855e"
+    },
+    {
+      "path": [
+        "资料",
+        "供应商",
+        "供应商查询"
+      ],
+      "category": "资料 > 供应商",
+      "title": "供应商查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=6c8ed75fb57442f4a30722d221867b87"
+    },
+    {
+      "path": [
+        "资料",
+        "供应商",
+        "供应商新增"
+      ],
+      "category": "资料 > 供应商",
+      "title": "供应商新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ac07fe91d5af4ab88fe6be5fc368c454"
+    },
+    {
+      "path": [
+        "资料",
+        "供应商",
+        "供应商修改"
+      ],
+      "category": "资料 > 供应商",
+      "title": "供应商修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8e9f5000be064d1d81a942ac9aa0cee8"
+    },
+    {
+      "path": [
+        "资料",
+        "供应商",
+        "供应商删除"
+      ],
+      "category": "资料 > 供应商",
+      "title": "供应商删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e6ff6a12181e4c688618859e5556b42c"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品查询"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=37084997dfc74aa3b037e77502f672fe"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品新增"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=63d01bab27f146de845fb502ec665584"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品修改"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ae8bc274c976474092237a1142be1345"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品删除"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=bfbffba64c5d4ca3b462e0423023574f"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品类别查询"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品类别查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=aa043ec88696471ba3fd91ebbec9cad7"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品类别新增"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品类别新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=04d15778bc264dd8aa353fb272e2baf0"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品类别修改"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品类别修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=717aea0261d041709c1a99bf9c273b6b"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品类别删除"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品类别删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=84a8e315507443f68769de45aee9209c"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品价格策略"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品价格策略",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=52d87f3bdd8d11ec9075c3fde5dcfd22"
+    },
+    {
+      "path": [
+        "资料",
+        "商品",
+        "商品条码"
+      ],
+      "category": "资料 > 商品",
+      "title": "商品条码",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9ea11b3467f911eea5e4fd1a62903d02"
+    },
+    {
+      "path": [
+        "资料",
+        "单位",
+        "单位查询"
+      ],
+      "category": "资料 > 单位",
+      "title": "单位查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=191fc0e64df0486080e7fd84104c337d"
+    },
+    {
+      "path": [
+        "资料",
+        "单位",
+        "单位新增"
+      ],
+      "category": "资料 > 单位",
+      "title": "单位新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=6fc30be0395a41f9aa9150b0d0db2271"
+    },
+    {
+      "path": [
+        "资料",
+        "单位",
+        "单位修改"
+      ],
+      "category": "资料 > 单位",
+      "title": "单位修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8ca999b7191f4526b3210356f8039302"
+    },
+    {
+      "path": [
+        "资料",
+        "单位",
+        "单位删除"
+      ],
+      "category": "资料 > 单位",
+      "title": "单位删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b0d2b34dd3994391abf2ba413d38ac7b"
+    },
+    {
+      "path": [
+        "资料",
+        "客户物料编码",
+        "查询"
+      ],
+      "category": "资料 > 客户物料编码",
+      "title": "查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7551486adcfa11eeaee32bc7f2bfaac4"
+    },
+    {
+      "path": [
+        "资料",
+        "部门",
+        "查询"
+      ],
+      "category": "资料 > 部门",
+      "title": "查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=dd660e8ce11511eeaee3d70b4d1a3141"
+    },
+    {
+      "path": [
+        "资料",
+        "项目",
+        "查询"
+      ],
+      "category": "资料 > 项目",
+      "title": "查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=e3f65acde11511eeaee33537aa483c9b"
+    },
+    {
+      "path": [
+        "资料",
+        "职员",
+        "职员查询"
+      ],
+      "category": "资料 > 职员",
+      "title": "职员查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=131ca08041e149f7a41d9596dc30a85e"
+    },
+    {
+      "path": [
+        "资料",
+        "职员",
+        "职员新增"
+      ],
+      "category": "资料 > 职员",
+      "title": "职员新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ebbcbcd3f73a4c69b033f9acf9e8c670"
+    },
+    {
+      "path": [
+        "资料",
+        "职员",
+        "职员修改"
+      ],
+      "category": "资料 > 职员",
+      "title": "职员修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9f47e05853b04a6386377efa3ad7cf14"
+    },
+    {
+      "path": [
+        "资料",
+        "职员",
+        "职员删除"
+      ],
+      "category": "资料 > 职员",
+      "title": "职员删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b4ac937d4d9e496bb104461fbbf3e5d2"
+    },
+    {
+      "path": [
+        "资料",
+        "账户",
+        "账户查询"
+      ],
+      "category": "资料 > 账户",
+      "title": "账户查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=bb29b927204f4bfdb98b5cbd1e888d26"
+    },
+    {
+      "path": [
+        "资料",
+        "账户",
+        "账户新增"
+      ],
+      "category": "资料 > 账户",
+      "title": "账户新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1104e50fa79f4daf85965c50a4cd2001"
+    },
+    {
+      "path": [
+        "资料",
+        "账户",
+        "账户修改"
+      ],
+      "category": "资料 > 账户",
+      "title": "账户修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=47736b76ea10440b9d0ccec608564786"
+    },
+    {
+      "path": [
+        "资料",
+        "账户",
+        "账户删除"
+      ],
+      "category": "资料 > 账户",
+      "title": "账户删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=47e0889d7b0a4ee7a82c633fdda79336"
+    },
+    {
+      "path": [
+        "资料",
+        "辅助属性",
+        "辅助属性查询"
+      ],
+      "category": "资料 > 辅助属性",
+      "title": "辅助属性查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3e8b20a642134346b6fe6b9d2778a24d"
+    },
+    {
+      "path": [
+        "资料",
+        "辅助属性",
+        "辅助属性新增"
+      ],
+      "category": "资料 > 辅助属性",
+      "title": "辅助属性新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=561c8ff5c5fe4d40bf2f7c6b092bb67e"
+    },
+    {
+      "path": [
+        "资料",
+        "辅助属性",
+        "辅助属性删除"
+      ],
+      "category": "资料 > 辅助属性",
+      "title": "辅助属性删除",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8e71221f53da4ebcb9d0936cf1da890e"
+    },
+    {
+      "path": [
+        "资料",
+        "辅助属性",
+        "辅助属性分类查询"
+      ],
+      "category": "资料 > 辅助属性",
+      "title": "辅助属性分类查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9ad4f4dfbfa542b9ae65cb322bd184c8"
+    },
+    {
+      "path": [
+        "资料",
+        "仓库",
+        "仓库查询"
+      ],
+      "category": "资料 > 仓库",
+      "title": "仓库查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=53db270baa78446d8cfd1c0492883049"
+    },
+    {
+      "path": [
+        "资料",
+        "结算方式查询"
+      ],
+      "category": "资料",
+      "title": "结算方式查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=dff95a48659011eda5c807b5c6b1c577"
+    },
+    {
+      "path": [
+        "资料",
+        "货架",
+        "货架查询"
+      ],
+      "category": "资料 > 货架",
+      "title": "货架查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9c0508b4eeda11edbce593dd8662d1aa"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "查询线路列表"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "查询线路列表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=7dc72bcd714911eebcbffb7dcbab7f79"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "新增线路"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "新增线路",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=88e2f39e714911eebcbf371cb3dfdd40"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "修改线路"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "修改线路",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8efb503b714911eea5e40145152e1465"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "删除线路"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "删除线路",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=96044eec714911eea5e4d9db21f607f8"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "启用/禁用线路"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "启用/禁用线路",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9ed22f1d714911eea5e48188b062210a"
+    },
+    {
+      "path": [
+        "资料",
+        "线路定义",
+        "设置默认/取消默认"
+      ],
+      "category": "资料 > 线路定义",
+      "title": "设置默认/取消默认",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=b16fce3dc01311ee8bba777263a59f20"
+    },
+    {
+      "path": [
+        "设置",
+        "批量换取新的预签名地址"
+      ],
+      "category": "设置",
+      "title": "批量换取新的预签名地址",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=d45048dfa33511efa3ea6bf07a75ae18"
+    },
+    {
+      "path": [
+        "设置",
+        "支付通道配置",
+        "支付通道修改"
+      ],
+      "category": "设置 > 支付通道配置",
+      "title": "支付通道修改",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5c5a4473dff311ed8408a9f2dc935dd6"
+    },
+    {
+      "path": [
+        "设置",
+        "支付通道配置",
+        "支付通道新增"
+      ],
+      "category": "设置 > 支付通道配置",
+      "title": "支付通道新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=9e315932dff111ed840819ace8fee368"
+    },
+    {
+      "path": [
+        "设置",
+        "支付通道配置",
+        "支付通道查询"
+      ],
+      "category": "设置 > 支付通道配置",
+      "title": "支付通道查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=4315ab60dfed11ed9ac3278cc16a56ea"
+    },
+    {
+      "path": [
+        "设置",
+        "系统参数"
+      ],
+      "category": "设置",
+      "title": "系统参数",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=5a279099c5c24e3dab6154f2bc75d207"
+    },
+    {
+      "path": [
+        "设置",
+        "单据审批"
+      ],
+      "category": "设置",
+      "title": "单据审批",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=a300fd747ba34cd6bb26ea76e225bf50"
+    },
+    {
+      "path": [
+        "设置",
+        "自定义字段查询"
+      ],
+      "category": "设置",
+      "title": "自定义字段查询",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=8e55203bea8943df965a28fcf72d01f2"
+    },
+    {
+      "path": [
+        "设置",
+        "自定义字段新增"
+      ],
+      "category": "设置",
+      "title": "自定义字段新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=0aa99edf38384ab39d6c4d5eb324edd9"
+    },
+    {
+      "path": [
+        "设置",
+        "在线打印设置",
+        "获取打印模板列表"
+      ],
+      "category": "设置 > 在线打印设置",
+      "title": "获取打印模板列表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=77d9cb39714811eea5e42797523bc705"
+    },
+    {
+      "path": [
+        "设置",
+        "在线打印设置",
+        "获取打印数据"
+      ],
+      "category": "设置 > 在线打印设置",
+      "title": "获取打印数据",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=cf6f0efa714811eea5e469c261ee7c68"
+    },
+    {
+      "path": [
+        "设置",
+        "在线打印设置",
+        "获取云打印设备列表"
+      ],
+      "category": "设置 > 在线打印设置",
+      "title": "获取云打印设备列表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=ed123029714811eebcbf2f7d39861565"
+    },
+    {
+      "path": [
+        "设置",
+        "在线打印设置",
+        "创建云打印任务"
+      ],
+      "category": "设置 > 在线打印设置",
+      "title": "创建云打印任务",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=1c44dc3a714911eebcbf1f975e434adc"
+    },
+    {
+      "path": [
+        "设置",
+        "在线打印设置",
+        "获取云打印记录列表"
+      ],
+      "category": "设置 > 在线打印设置",
+      "title": "获取云打印记录列表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=3781843b714911eebcbfd1c29e4a15b1"
+    }
+  ],
+  "total": 168
+}

@@ -9,12 +9,16 @@
  * 断点续跑：若 nav-tree.json 已存在且含 partial 标记，自动跳过已采集的页面。
  */
 import { chromium } from 'playwright';
-import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync, copyFileSync } from 'fs';
+import { join } from 'path';
 
 const ENTRY_URL = 'https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=adfe4a24712711eda0b307c6992ee459';
-const OUT_DIR = 'W:/Projects/Online_APIs/open_jdy/_meta/金蝶云星辰';
-const OUT_FILE = `${OUT_DIR}/nav-tree.json`;
+const OUT_DIR = join(import.meta.dirname, '..', '_meta', '金蝶云星辰');
+const OUT_FILE = join(OUT_DIR, 'nav-tree.json');
+const DIFF_FILE = join(OUT_DIR, 'nav-diff.json');
+const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
 const SAVE_INTERVAL = 10; // 每 N 页保存一次
+const RESUME = process.argv.includes('--resume');
 
 /** 持久化当前采集结果 */
 function saveProgress(tree, flatList, partial = true) {
@@ -24,39 +28,40 @@ function saveProgress(tree, flatList, partial = true) {
 }
 
 /** 加载已有进度（断点续跑） */
-function loadExistingPages() {
-  if (!existsSync(OUT_FILE)) return new Set();
+function loadExistingData() {
+  if (!existsSync(OUT_FILE)) return null;
   try {
-    const data = JSON.parse(readFileSync(OUT_FILE, 'utf-8'));
-    if (data.pages && Array.isArray(data.pages)) {
-      const urls = new Set(data.pages.map(p => p.url));
-      console.log(`发现已有进度: ${urls.size} 页，将跳过已采集的 URL`);
-      return urls;
-    }
-  } catch { /* ignore corrupt file */ }
-  return new Set();
+    return JSON.parse(readFileSync(OUT_FILE, 'utf-8'));
+  } catch {
+    return null;
+  }
 }
 
 async function main() {
   mkdirSync(OUT_DIR, { recursive: true });
+  let completed = false;
 
-  // 加载断点
-  const existingUrls = loadExistingPages();
+  const previousData = loadExistingData();
+  const resumableData = RESUME && previousData?.partial ? previousData : null;
+  const existingUrls = new Set((resumableData?.pages || []).map(p => p.url));
   let flatList = [];
-  if (existingUrls.size > 0) {
-    try {
-      const data = JSON.parse(readFileSync(OUT_FILE, 'utf-8'));
-      flatList = data.pages || [];
-    } catch { /* start fresh */ }
+  if (resumableData) {
+    flatList = resumableData.pages || [];
+    console.log(`恢复未完成导航: ${existingUrls.size} 页`);
+  } else if (previousData) {
+    copyFileSync(OUT_FILE, join(OUT_DIR, 'nav-tree.previous.json'));
+    console.log(`fresh 模式: 已备份旧导航 ${previousData.pages?.length || 0} 页`);
   }
 
-  const browser = await chromium.launch({ headless: false });
-  const page = await browser.newPage();
+  const browser = await chromium.connectOverCDP(CDP_URL);
+  const context = browser.contexts()[0];
+  if (!context) throw new Error(`CDP 未提供浏览器上下文: ${CDP_URL}`);
+  const page = await context.newPage();
 
   // 崩溃时保存已有结果
   let navTree = [];
   const emergencySave = () => {
-    if (flatList.length > 0) {
+    if (!completed && flatList.length > 0) {
       console.log(`\n⚠️ 异常退出，紧急保存 ${flatList.length} 页...`);
       saveProgress(navTree, flatList, true);
     }
@@ -200,8 +205,25 @@ async function main() {
   // 最终保存（标记为完成）
   saveProgress(navTree, flatList, false);
 
-  console.log(`\n完成！共 ${flatList.length} 个页面，已保存到 ${OUT_FILE}`);
-  await browser.close();
+  const previousPages = previousData?.pages || [];
+  const previousByUrl = new Map(previousPages.map(p => [p.url, p]));
+  const currentByUrl = new Map(flatList.map(p => [p.url, p]));
+  const navDiff = {
+    date: new Date().toISOString(),
+    previousTotal: previousPages.length,
+    currentTotal: flatList.length,
+    added: flatList.filter(p => !previousByUrl.has(p.url)),
+    removed: previousPages.filter(p => !currentByUrl.has(p.url)),
+  };
+  writeFileSync(DIFF_FILE, JSON.stringify(navDiff, null, 2), 'utf-8');
+  completed = true;
+
+  console.log(`\n完成！共 ${flatList.length} 个页面，新增 ${navDiff.added.length}，删除 ${navDiff.removed.length}`);
+  await Promise.race([
+    page.close(),
+    new Promise(resolve => setTimeout(resolve, 3000)),
+  ]);
+  process.exit(0);
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

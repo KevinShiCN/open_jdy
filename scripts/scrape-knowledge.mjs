@@ -445,7 +445,7 @@ function generateIndex(allArticles) {
   md += `> 数据来源：[金蝶云社区帮助中心](${BASE_URL}/knowledge?productLineId=35&productId=9)\n\n`;
   md += `## 使用说明\n\n`;
   md += `- 这些是**社区帮助中心**文档，不是 API 文档\n`;
-  md += `- API 文档请查看 \`docs/精斗云/\` 和 \`docs/金蝶云星辰/\`\n`;
+  md += `- API 文档请查看 \`docs/金蝶云进销存/\` 和 \`docs/金蝶云星辰/\`\n`;
   md += `- 搜索：\`rg "关键词" docs/帮助中心/ -l\`\n\n`;
 
   // 按分类统计

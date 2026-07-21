@@ -7,13 +7,18 @@
  */
 import { chromium } from 'playwright';
 import { writeFileSync, mkdirSync } from 'fs';
+import { join } from 'path';
 
 const ENTRY_URL = 'https://open.jdy.com/#/files/api/detail?index=3&categrayId=a125933242c3454190877377b96b8b14&id=f808311a277f4a099a5d5bfa72b0656a';
-const OUT_FILE = 'W:/Projects/Online_APIs/open_jdy/_meta/nav-tree.json';
+const OUT_DIR = join(import.meta.dirname, '..', '_meta', '金蝶云进销存');
+const OUT_FILE = join(OUT_DIR, 'nav-tree.json');
+const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
 
 async function main() {
-  const browser = await chromium.launch({ headless: false });
-  const page = await browser.newPage();
+  const browser = await chromium.connectOverCDP(CDP_URL);
+  const context = browser.contexts()[0];
+  if (!context) throw new Error(`CDP 未提供浏览器上下文: ${CDP_URL}`);
+  const page = await context.newPage();
 
   console.log('正在加载页面...');
   await page.goto(ENTRY_URL, { waitUntil: 'networkidle', timeout: 60000 });
@@ -125,11 +130,11 @@ async function main() {
 
   // 保存结果
   const result = { tree: navTree, pages: flatList, total: flatList.length };
-  mkdirSync('W:/Projects/Online_APIs/open_jdy/_meta', { recursive: true });
+  mkdirSync(OUT_DIR, { recursive: true });
   writeFileSync(OUT_FILE, JSON.stringify(result, null, 2), 'utf-8');
 
   console.log(`\n完成！共 ${flatList.length} 个页面，已保存到 ${OUT_FILE}`);
-  await browser.close();
+  await page.close();
 }
 
 main().catch(e => { console.error(e); process.exit(1); });

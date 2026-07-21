@@ -6,13 +6,13 @@
  * 用法: node scripts/crawl-yxc.mjs [--concurrency N] [--force] [--category 购货] [--start N] [--end N]
  */
 import { chromium } from 'playwright';
-import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
+import { writeFileSync, readFileSync, mkdirSync, existsSync, unlinkSync } from 'fs';
 import { createHash } from 'crypto';
 import { dirname, join } from 'path';
 
 const DOCS_DIR = join(import.meta.dirname, '..', 'docs', '金蝶云星辰');
 const META_DIR = join(import.meta.dirname, '..', '_meta', '金蝶云星辰');
-const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '3');
+const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '1');
 const CATEGORY_FILTER = process.argv.find((_, i, a) => a[i-1] === '--category') || '';
 const START_INDEX = parseInt(process.argv.find((_, i, a) => a[i-1] === '--start') || '0');
 const END_INDEX = parseInt(process.argv.find((_, i, a) => a[i-1] === '--end') || '999999');
@@ -21,6 +21,7 @@ const QUICK_SKIP = process.argv.includes('--quick');
 const MAX_RETRIES = 2;
 const DELAY_MS = 800;
 const CONSECUTIVE_FAIL_LIMIT = 5;
+const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
 
 // 内容哈希（排除 crawl_date 和 last_update，避免日期变化产生误报）
 function contentHash(text) {
@@ -103,6 +104,9 @@ function extractPageContent() {
 /** 加载导航数据 */
 function loadNavData() {
   const raw = JSON.parse(readFileSync(join(META_DIR, 'nav-tree.json'), 'utf-8'));
+  if (raw.partial !== false) throw new Error('导航尚未完成，拒绝抓取');
+  if (raw.total !== raw.pages?.length) throw new Error('导航 total 与 pages 数量不一致');
+  if (new Set(raw.pages.map(p => p.url)).size !== raw.total) throw new Error('导航包含重复 URL');
   return raw.pages.map(p => {
     const safeName = p.title.replace(/[<>:"/\\|?*]/g, '_').replace(/\s+/g, ' ').trim();
     const category = p.path[0] || '未分类';
@@ -229,9 +233,8 @@ async function main() {
     console.log(`Batch: [${START_INDEX}, ${END_INDEX})`);
   }
 
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.connectOverCDP(CDP_URL);
   const results = await runPool(tasks, browser, CONCURRENCY);
-  await browser.close();
 
   const stats = { new: 0, updated: 0, unchanged: 0, skip: 0, fail: 0 };
   for (const r of results) stats[r.status] = (stats[r.status] || 0) + 1;
@@ -242,6 +245,9 @@ async function main() {
     const failFile = join(META_DIR, `crawl-failures-${START_INDEX}-${END_INDEX}.json`);
     writeFileSync(failFile, JSON.stringify(fail, null, 2));
     console.log(`Failures saved to ${failFile}`);
+  } else {
+    const failFile = join(META_DIR, `crawl-failures-${START_INDEX}-${END_INDEX}.json`);
+    if (existsSync(failFile)) unlinkSync(failFile);
   }
 
   const report = {
@@ -257,6 +263,15 @@ async function main() {
   }
   const reportFile = join(META_DIR, `crawl-report-${START_INDEX}-${END_INDEX}.json`);
   writeFileSync(reportFile, JSON.stringify(report, null, 2));
+  console.log(`Report: ${reportFile}`);
+
+  if (stats.fail > 0 || results.length !== tasks.length) {
+    throw new Error(`抓取未完整完成: processed=${results.length}, expected=${tasks.length}, fail=${stats.fail}`);
+  }
+  process.exit(0);
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

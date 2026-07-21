@@ -1,8 +1,8 @@
 #!/usr/bin/env node
 /**
- * gen-index-all.mjs - 生成覆盖精斗云 + 金蝶云星辰双产品的 docs/INDEX.md
+ * gen-index-all.mjs - 生成覆盖金蝶云进销存 + 金蝶云星辰双产品的 docs/INDEX.md
  *
- * 读取 _meta/精斗云/nav-tree.json 和 _meta/金蝶云星辰/nav-tree.json，
+ * 读取 _meta/金蝶云进销存/nav-tree.json 和 _meta/金蝶云星辰/nav-tree.json，
  * 按产品 → 分类 → API 页面组织索引。
  */
 import { readFileSync, readdirSync, writeFileSync, existsSync } from 'fs';
@@ -13,10 +13,15 @@ const META_DIR = join(import.meta.dirname, '..', '_meta');
 
 const PRODUCTS = [
   { name: '金蝶云星辰', dir: '金蝶云星辰', prefix: '金蝶云星辰' },
-  { name: '精斗云', dir: '精斗云', prefix: '精斗云' },
+  { name: '金蝶云进销存', dir: '金蝶云进销存', prefix: '金蝶云进销存' },
 ];
 
 const lines = [];
+
+function encodePath(path) {
+  return path.split('/').map(segment => encodeURIComponent(segment)
+    .replace(/\(/g, '%28').replace(/\)/g, '%29')).join('/');
+}
 
 /** 统计产品页面数 */
 function countPages(navData) {
@@ -36,7 +41,7 @@ function renderTree(items, navData, productDir, depth = 0) {
           ? `${productDir}/${category}/${subDir}/${safeName}.md`
           : `${productDir}/${category}/${safeName}.md`;
         const indent = '  '.repeat(depth);
-        lines.push(`${indent}- [${item.text}](${relPath.replace(/ /g, '%20')})`);
+        lines.push(`${indent}- [${item.text}](${encodePath(relPath)})`);
       }
     } else {
       const indent = '  '.repeat(depth);
@@ -88,7 +93,7 @@ lines.push('## 使用说明');
 lines.push('');
 lines.push('- AI/LLM 开发时，先读此文件定位所需 API，再读具体文档');
 lines.push('- 搜索：`rg "关键词" docs/ -l`');
-lines.push('- 按产品搜索：`rg "关键词" docs/金蝶云星辰/ -l` 或 `rg "关键词" docs/精斗云/ -l`');
+lines.push('- 按产品搜索：`rg "关键词" docs/金蝶云星辰/ -l` 或 `rg "关键词" docs/金蝶云进销存/ -l`');
 lines.push('');
 
 // 按产品渲染
@@ -108,14 +113,14 @@ for (const p of productStats) {
 }
 
 // 追加已迁移文档
-const migratedDir = join(DOCS_DIR, '精斗云', '已迁移');
+const migratedDir = join(DOCS_DIR, '金蝶云进销存', '历史快照', '精斗云-20260317', '已迁移');
 if (existsSync(migratedDir)) {
   lines.push('## 已迁移文档（原 kingdee_cloud）');
   lines.push('');
   try {
     const migrated = readdirSync(migratedDir).filter(f => f.endsWith('.md'));
     for (const f of migrated) {
-      lines.push(`- [${f.replace('.md', '')}](精斗云/已迁移/${f.replace(/ /g, '%20')})`);
+      lines.push(`- [${f.replace('.md', '')}](${encodePath(`金蝶云进销存/历史快照/精斗云-20260317/已迁移/${f}`)})`);
     }
   } catch { /* 目录不存在则跳过 */ }
   lines.push('');

@@ -10,15 +10,16 @@ import { writeFileSync, readFileSync, mkdirSync, existsSync } from 'fs';
 import { createHash } from 'crypto';
 import { dirname, join } from 'path';
 
-const DOCS_DIR = join(import.meta.dirname, '..', 'docs');
-const META_DIR = join(import.meta.dirname, '..', '_meta');
-const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '2');
+const DOCS_DIR = join(import.meta.dirname, '..', 'docs', '金蝶云进销存');
+const META_DIR = join(import.meta.dirname, '..', '_meta', '金蝶云进销存');
+const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '1');
 const CATEGORY_FILTER = process.argv.find((_, i, a) => a[i-1] === '--category') || '';
 const FORCE_WRITE = process.argv.includes('--force');
 const QUICK_SKIP = process.argv.includes('--quick');
 const MAX_RETRIES = 2;
 const DELAY_MS = 800;
 const CONSECUTIVE_FAIL_LIMIT = 5;
+const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
 
 // 内容哈希（排除 crawl_date 和 last_update，避免日期变化产生误报）
 function contentHash(text) {
@@ -220,9 +221,8 @@ async function main() {
   }
   console.log(`Total: ${tasks.length}, Concurrency: ${CONCURRENCY}, Mode: ${FORCE_WRITE ? 'force' : QUICK_SKIP ? 'quick' : 'smart'}`);
 
-  const browser = await chromium.launch({ headless: false });
+  const browser = await chromium.connectOverCDP(CDP_URL);
   const results = await runPool(tasks, browser, CONCURRENCY);
-  await browser.close();
 
   const stats = { new: 0, updated: 0, unchanged: 0, skip: 0, fail: 0 };
   for (const r of results) stats[r.status] = (stats[r.status] || 0) + 1;
@@ -247,4 +247,7 @@ async function main() {
   writeFileSync(join(META_DIR, 'crawl-report.json'), JSON.stringify(report, null, 2));
 }
 
-main().catch(console.error);
+main().catch((error) => {
+  console.error(error);
+  process.exitCode = 1;
+});

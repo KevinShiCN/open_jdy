@@ -8,7 +8,7 @@ import { join } from 'path';
 const DOCS_DIR = join(import.meta.dirname, '..', 'docs');
 const META_DIR = join(import.meta.dirname, '..', '_meta');
 
-const products = ['精斗云', '金蝶云星辰'];
+const products = ['金蝶云进销存', '金蝶云星辰'];
 const lines = [
   '# 金蝶云 API 文档索引',
   '',
@@ -20,6 +20,11 @@ const lines = [
   '- 搜索：`rg "关键词" docs/ -l`',
   '',
 ];
+
+function encodePath(path) {
+  return path.split('/').map(segment => encodeURIComponent(segment)
+    .replace(/\(/g, '%28').replace(/\)/g, '%29')).join('/');
+}
 
 // 按导航树结构生成目录
 function renderTree(items, depth, productName) {
@@ -35,7 +40,7 @@ function renderTree(items, depth, productName) {
           ? `${productName}/${category}/${subDir}/${safeName}.md`
           : `${productName}/${category}/${safeName}.md`;
         const indent = '  '.repeat(depth);
-        lines.push(`${indent}- [${item.text}](${relPath.replace(/ /g, '%20')})`);
+        lines.push(`${indent}- [${item.text}](${encodePath(relPath)})`);
       }
     } else {
       const indent = '  '.repeat(depth);
