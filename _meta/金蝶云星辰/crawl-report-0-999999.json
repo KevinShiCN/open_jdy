@@ -1,52 +1,88 @@
 {
-  "date": "2026-03-03T03:47:31.321Z",
+  "date": "2026-07-20T22:38:16.334Z",
   "batch": {
     "start": 0,
     "end": 999999
   },
-  "total": 382,
-  "success": 382,
-  "skipped": 0,
-  "failed": 0,
+  "total": 394,
+  "stats": {
+    "new": 12,
+    "updated": 36,
+    "unchanged": 346,
+    "skip": 0,
+    "fail": 0
+  },
   "categories": {
     "指导文档": {
       "total": 3,
-      "ok": 3,
+      "new": 0,
+      "updated": 2,
+      "unchanged": 1,
+      "skip": 0,
+      "fail": 0
+    },
+    "审批流": {
+      "total": 3,
+      "new": 3,
+      "updated": 0,
+      "unchanged": 0,
+      "skip": 0,
       "fail": 0
     },
     "进销存云": {
-      "total": 165,
-      "ok": 165,
+      "total": 167,
+      "new": 2,
+      "updated": 18,
+      "unchanged": 147,
+      "skip": 0,
       "fail": 0
     },
     "自定义云": {
       "total": 4,
-      "ok": 4,
+      "new": 0,
+      "updated": 0,
+      "unchanged": 4,
+      "skip": 0,
       "fail": 0
     },
     "财税云": {
       "total": 56,
-      "ok": 56,
+      "new": 0,
+      "updated": 2,
+      "unchanged": 54,
+      "skip": 0,
       "fail": 0
     },
     "零售云": {
-      "total": 31,
-      "ok": 31,
+      "total": 32,
+      "new": 1,
+      "updated": 2,
+      "unchanged": 29,
+      "skip": 0,
       "fail": 0
     },
     "生产云": {
-      "total": 17,
-      "ok": 17,
+      "total": 19,
+      "new": 2,
+      "updated": 4,
+      "unchanged": 13,
+      "skip": 0,
       "fail": 0
     },
     "基础资料": {
-      "total": 90,
-      "ok": 90,
+      "total": 93,
+      "new": 3,
+      "updated": 4,
+      "unchanged": 86,
+      "skip": 0,
       "fail": 0
     },
     "系统设置": {
-      "total": 16,
-      "ok": 16,
+      "total": 17,
+      "new": 1,
+      "updated": 4,
+      "unchanged": 12,
+      "skip": 0,
       "fail": 0
     }
   }

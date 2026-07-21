@@ -1,23 +1,23 @@
 ---
-title: "凭证字列表 更新于2023-04-19 13:35 复制链接"
+title: "根据产品查询BOM 更新于1970-01-01 08:00 复制链接"
 product: "金蝶云星辰"
-category: "基础资料 > 财务资料 > 凭证字列表"
-source: "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=9d24174d712511eda0b33dc1540562aa"
-last_update: "2023-04-19 13:35"
+category: "生产云 > 生产管理 > 生产任务单 > 根据产品查询BOM"
+source: "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=67fd31e275ab11f18fd1eff7c05e0e50"
+last_update: "1970-01-01 08:00"
 crawl_date: "2026-07-20"
 ---
 
-# 凭证字列表 更新于2023-04-19 13:35 复制链接
+# 根据产品查询BOM 更新于1970-01-01 08:00 复制链接
 
-> 产品：金蝶云星辰 | 分类：基础资料 > 财务资料 > 凭证字列表
+> 产品：金蝶云星辰 | 分类：生产云 > 生产管理 > 生产任务单 > 根据产品查询BOM
 
-凭证字列表 更新于2023-04-19 13:35 复制链接    一级标题 二级标题 三级标题 四级标题 五级标题 六级标题                添加图片链接 上传图片
+根据产品查询BOM 更新于1970-01-01 08:00 复制链接    一级标题 二级标题 三级标题 四级标题 五级标题 六级标题                添加图片链接 上传图片
                                          
 ```
 ### 基本信息
-- 用途说明：凭证字列表
-- 请求方式：GET
-- 请求地址：https://api.kingdee.com/jdy/v2/fi/voucher_type
+- 用途说明：根据产品查询BOM
+- 请求方式：POST
+- 请求地址：https://api.kingdee.com/jdy/v2/pm/bom
 ### 请求参数
 #### headers参数
 | 参数名称               | 参数示例                        | 是否必填 | 参数说明                                                                                                                                                             |
@@ -32,9 +32,38 @@ crawl_date: "2026-07-20"
 | app-token          | xxx                         | true | 产品账套级别的token，[获取指引](https://open.jdy.com/#/files/api/detail?index=3&categrayId=5403e0fd6a5811eda819b759130d6d33&id=9076d1a6da9d11ed8e36874bed64e0be&noside=true) |
 | X-GW-Router-Addr   | https://tf.jdy.com          | true | IDC域名，获取appKey返回消息体内的domain字段                                                                                                                                    |
 
+#### body参数
+| 参数名称         | 参数类型                | 是否必填 | 参数说明 |
+| --- | --- | --- | --- |
+| material_ids | List <MaterialList> | true | 商品id 
+
+**MaterialList**
+| 参数名称        | 参数类型   | 是否必填  | 参数说明          |
+| --- | --- | --- | --- |
+| aux_prop_id | string | false | 辅助属性ID 辅助商品必录 
+| material_id | string | false | 产品ID          
+
 #### 请求示例
 ```txt
-curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
+curl --location --request  post 'https://api.kingdee.com/jdy/v2/pm/bom' \
+--header 'Content-Type: application/json' \
+--header 'X-Api-ClientID: 205022' \
+--header 'X-Api-Auth-Version: 2.0' \
+--header 'X-Api-TimeStamp: 1655775240000' \
+--header 'X-Api-Nonce: 1655775240000' \
+--header 'X-Api-SignHeaders: X-Api-TimeStamp,X-Api-Nonce' \
+--header 'X-Api-Signature: xxx' \
+--header 'app-token: xxx' \
+--header 'X-GW-Router-Addr: https://tf.jdy.com' \
+--data-row '
+{
+	"material_ids":[
+		{
+			"aux_prop_id":"10",
+			"material_id":"10"
+		}
+	]
+}'
 ```
 ### 响应参数
 | 参数名称        | 参数类型    | 参数说明                      |
@@ -44,38 +73,30 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 | data        | Data    | 业务返回具体对象                  |
 
 **Data**
-| 参数名称              | 参数类型       | 参数说明  |
+| 参数名称        | 参数类型           | 参数说明   |
 | --- | --- | --- |
-| count             | string     | 总条数   
-| current_page_size | integer    | 当前页条数 
-| page              | integer    | 当前页码  
-| page_size         | integer    | 每页条数  
-| rows              | List <Row> | 数据行   
-| total_page        | integer    | 总页数   
+| aux_prop_id | string         | 辅助属性ID 
+| bom_list    | List <bomList> | BOM集合  
+| material_id | string         | 产品ID   
 
-**Row**
-| 参数名称   | 参数类型   | 参数说明 |
+**bomList**
+| 参数名称 | 参数类型   | 参数说明   |
 | --- | --- | --- |
-| id     | string | id   
-| name   | string | 名称   
-| number | string | 编码   
+| id   | string | BOM集合  
+| name | string | BOM单编号 
 
 #### 响应示例
 ```json
 {
 	"data":{
-		"count":"1",
-		"current_page_size":1,
-		"page":1,
-		"page_size":100,
-		"rows":[
+		"aux_prop_id":"10",
+		"bom_list":[
 			{
-				"id":"1",
-				"name":"名称",
-				"number":"编码"
+				"id":"10",
+				"name":"10"
 			}
 		],
-		"total_page":100
+		"material_id":"10"
 	},
 	"description":"success",
 	"errcode":0
@@ -90,11 +111,11 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
   
 ### []()基本信息
 
-- 用途说明：凭证字列表
+- 用途说明：根据产品查询BOM
 
-- 请求方式：GET
+- 请求方式：POST
 
-- 请求地址：https://api.kingdee.com/jdy/v2/fi/voucher_type
+- 请求地址：https://api.kingdee.com/jdy/v2/pm/bom
 
 ### []()请求参数
 
@@ -112,10 +133,41 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 | app-token | xxx | true | 产品账套级别的token，获取指引 |
 | X-GW-Router-Addr | https://tf.jdy.com | true | IDC域名，获取appKey返回消息体内的domain字段 |
 
+#### []()body参数
+
+| 参数名称 | 参数类型 | 是否必填 | 参数说明 |
+| --- | --- | --- | --- |
+| material_ids | List <MaterialList> | true | 商品id |
+
+**MaterialList**
+
+| 参数名称 | 参数类型 | 是否必填 | 参数说明 |
+| --- | --- | --- | --- |
+| aux_prop_id | string | false | 辅助属性ID 辅助商品必录 |
+| material_id | string | false | 产品ID |
+
 #### []()请求示例
 
 ```
-curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
+curl --location --request  post 'https://api.kingdee.com/jdy/v2/pm/bom' \
+--header 'Content-Type: application/json' \
+--header 'X-Api-ClientID: 205022' \
+--header 'X-Api-Auth-Version: 2.0' \
+--header 'X-Api-TimeStamp: 1655775240000' \
+--header 'X-Api-Nonce: 1655775240000' \
+--header 'X-Api-SignHeaders: X-Api-TimeStamp,X-Api-Nonce' \
+--header 'X-Api-Signature: xxx' \
+--header 'app-token: xxx' \
+--header 'X-GW-Router-Addr: https://tf.jdy.com' \
+--data-row '
+{
+	"material_ids":[
+		{
+			"aux_prop_id":"10",
+			"material_id":"10"
+		}
+	]
+}'
 ```
 
 ### []()响应参数
@@ -130,38 +182,30 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 
 | 参数名称 | 参数类型 | 参数说明 |
 | --- | --- | --- |
-| count | string | 总条数 |
-| current_page_size | integer | 当前页条数 |
-| page | integer | 当前页码 |
-| page_size | integer | 每页条数 |
-| rows | List <Row> | 数据行 |
-| total_page | integer | 总页数 |
+| aux_prop_id | string | 辅助属性ID |
+| bom_list | List <bomList> | BOM集合 |
+| material_id | string | 产品ID |
 
-**Row**
+**bomList**
 
 | 参数名称 | 参数类型 | 参数说明 |
 | --- | --- | --- |
-| id | string | id |
-| name | string | 名称 |
-| number | string | 编码 |
+| id | string | BOM集合 |
+| name | string | BOM单编号 |
 
 #### []()响应示例
 
 ```
 {
 	"data":{
-		"count":"1",
-		"current_page_size":1,
-		"page":1,
-		"page_size":100,
-		"rows":[
+		"aux_prop_id":"10",
+		"bom_list":[
 			{
-				"id":"1",
-				"name":"名称",
-				"number":"编码"
+				"id":"10",
+				"name":"10"
 			}
 		],
-		"total_page":100
+		"material_id":"10"
 	},
 	"description":"success",
 	"errcode":0
@@ -178,9 +222,9 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
  
                 <h3><a id="_0"></a>基本信息</h3>
 <ul>
-<li>用途说明：凭证字列表</li>
-<li>请求方式：GET</li>
-<li>请求地址：https://api.kingdee.com/jdy/v2/fi/voucher_type</li>
+<li>用途说明：根据产品查询BOM</li>
+<li>请求方式：POST</li>
+<li>请求地址：https://api.kingdee.com/jdy/v2/pm/bom</li>
 </ul>
 <h3><a id="_4"></a>请求参数</h3>
 <h4><a id="headers_5"></a>headers参数</h4>
@@ -250,10 +294,72 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 </tr>
 </tbody>
 </table>
-<h4><a id="_18"></a>请求示例</h4>
-<pre><div class="hljs"><code class="lang-txt">curl --location --request  get &#x27;https://api.kingdee.com/jdy/v2/fi/voucher_type
+<h4><a id="body_18"></a>body参数</h4>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>是否必填</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>material_ids</td>
+<td>List &lt;MaterialList&gt;</td>
+<td>true</td>
+<td>商品id</td>
+</tr>
+</tbody>
+</table>
+<p><strong>MaterialList</strong></p>
+<table>
+<thead>
+<tr>
+<th>参数名称</th>
+<th>参数类型</th>
+<th>是否必填</th>
+<th>参数说明</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>aux_prop_id</td>
+<td>string</td>
+<td>false</td>
+<td>辅助属性ID 辅助商品必录</td>
+</tr>
+<tr>
+<td>material_id</td>
+<td>string</td>
+<td>false</td>
+<td>产品ID</td>
+</tr>
+</tbody>
+</table>
+<h4><a id="_29"></a>请求示例</h4>
+<pre><div class="hljs"><code class="lang-txt">curl --location --request  post &#x27;https://api.kingdee.com/jdy/v2/pm/bom&#x27; \
+--header &#x27;Content-Type: application/json&#x27; \
+--header &#x27;X-Api-ClientID: 205022&#x27; \
+--header &#x27;X-Api-Auth-Version: 2.0&#x27; \
+--header &#x27;X-Api-TimeStamp: 1655775240000&#x27; \
+--header &#x27;X-Api-Nonce: 1655775240000&#x27; \
+--header &#x27;X-Api-SignHeaders: X-Api-TimeStamp,X-Api-Nonce&#x27; \
+--header &#x27;X-Api-Signature: xxx&#x27; \
+--header &#x27;app-token: xxx&#x27; \
+--header &#x27;X-GW-Router-Addr: https://tf.jdy.com&#x27; \
+--data-row &#x27;
+{
+	&quot;material_ids&quot;:[
+		{
+			&quot;aux_prop_id&quot;:&quot;10&quot;,
+			&quot;material_id&quot;:&quot;10&quot;
+		}
+	]
+}&#x27;
 </code></div></pre>
-<h3><a id="_22"></a>响应参数</h3>
+<h3><a id="_51"></a>响应参数</h3>
 <table>
 <thead>
 <tr>
@@ -291,38 +397,23 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 </thead>
 <tbody>
 <tr>
-<td>count</td>
+<td>aux_prop_id</td>
 <td>string</td>
-<td>总条数</td>
+<td>辅助属性ID</td>
 </tr>
 <tr>
-<td>current_page_size</td>
-<td>integer</td>
-<td>当前页条数</td>
+<td>bom_list</td>
+<td>List &lt;bomList&gt;</td>
+<td>BOM集合</td>
 </tr>
 <tr>
-<td>page</td>
-<td>integer</td>
-<td>当前页码</td>
-</tr>
-<tr>
-<td>page_size</td>
-<td>integer</td>
-<td>每页条数</td>
-</tr>
-<tr>
-<td>rows</td>
-<td>List &lt;Row&gt;</td>
-<td>数据行</td>
-</tr>
-<tr>
-<td>total_page</td>
-<td>integer</td>
-<td>总页数</td>
+<td>material_id</td>
+<td>string</td>
+<td>产品ID</td>
 </tr>
 </tbody>
 </table>
-<p><strong>Row</strong></p>
+<p><strong>bomList</strong></p>
 <table>
 <thead>
 <tr>
@@ -335,41 +426,32 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 <tr>
 <td>id</td>
 <td>string</td>
-<td>id</td>
+<td>BOM集合</td>
 </tr>
 <tr>
 <td>name</td>
 <td>string</td>
-<td>名称</td>
-</tr>
-<tr>
-<td>number</td>
-<td>string</td>
-<td>编码</td>
+<td>BOM单编号</td>
 </tr>
 </tbody>
 </table>
-<h4><a id="_46"></a>响应示例</h4>
+<h4><a id="_71"></a>响应示例</h4>
 <pre><div class="hljs"><code class="lang-json"><span class="hljs-punctuation">{</span>
 	<span class="hljs-attr">&quot;data&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">{</span>
-		<span class="hljs-attr">&quot;count&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;1&quot;</span><span class="hljs-punctuation">,</span>
-		<span class="hljs-attr">&quot;current_page_size&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
-		<span class="hljs-attr">&quot;page&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">1</span><span class="hljs-punctuation">,</span>
-		<span class="hljs-attr">&quot;page_size&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">100</span><span class="hljs-punctuation">,</span>
-		<span class="hljs-attr">&quot;rows&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span>
+		<span class="hljs-attr">&quot;aux_prop_id&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;10&quot;</span><span class="hljs-punctuation">,</span>
+		<span class="hljs-attr">&quot;bom_list&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-punctuation">[</span>
 			<span class="hljs-punctuation">{</span>
-				<span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;1&quot;</span><span class="hljs-punctuation">,</span>
-				<span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;名称&quot;</span><span class="hljs-punctuation">,</span>
-				<span class="hljs-attr">&quot;number&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;编码&quot;</span>
+				<span class="hljs-attr">&quot;id&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;10&quot;</span><span class="hljs-punctuation">,</span>
+				<span class="hljs-attr">&quot;name&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;10&quot;</span>
 			<span class="hljs-punctuation">}</span>
 		<span class="hljs-punctuation">]</span><span class="hljs-punctuation">,</span>
-		<span class="hljs-attr">&quot;total_page&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">100</span>
+		<span class="hljs-attr">&quot;material_id&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;10&quot;</span>
 	<span class="hljs-punctuation">}</span><span class="hljs-punctuation">,</span>
 	<span class="hljs-attr">&quot;description&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-string">&quot;success&quot;</span><span class="hljs-punctuation">,</span>
 	<span class="hljs-attr">&quot;errcode&quot;</span><span class="hljs-punctuation">:</span><span class="hljs-number">0</span>
 <span class="hljs-punctuation">}</span>
 </code></div></pre>
-<h4><a id="_67"></a>返回码</h4>
+<h4><a id="_88"></a>返回码</h4>
 <table>
 <thead>
 <tr>
@@ -396,11 +478,11 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
                     导航目录**    
 ### []()基本信息
 
-- 用途说明：凭证字列表
+- 用途说明：根据产品查询BOM
 
-- 请求方式：GET
+- 请求方式：POST
 
-- 请求地址：https://api.kingdee.com/jdy/v2/fi/voucher_type
+- 请求地址：https://api.kingdee.com/jdy/v2/pm/bom
 
 ### []()请求参数
 
@@ -418,10 +500,41 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 | app-token | xxx | true | 产品账套级别的token，获取指引 |
 | X-GW-Router-Addr | https://tf.jdy.com | true | IDC域名，获取appKey返回消息体内的domain字段 |
 
+#### []()body参数
+
+| 参数名称 | 参数类型 | 是否必填 | 参数说明 |
+| --- | --- | --- | --- |
+| material_ids | List <MaterialList> | true | 商品id |
+
+**MaterialList**
+
+| 参数名称 | 参数类型 | 是否必填 | 参数说明 |
+| --- | --- | --- | --- |
+| aux_prop_id | string | false | 辅助属性ID 辅助商品必录 |
+| material_id | string | false | 产品ID |
+
 #### []()请求示例
 
 ```
-curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
+curl --location --request  post 'https://api.kingdee.com/jdy/v2/pm/bom' \
+--header 'Content-Type: application/json' \
+--header 'X-Api-ClientID: 205022' \
+--header 'X-Api-Auth-Version: 2.0' \
+--header 'X-Api-TimeStamp: 1655775240000' \
+--header 'X-Api-Nonce: 1655775240000' \
+--header 'X-Api-SignHeaders: X-Api-TimeStamp,X-Api-Nonce' \
+--header 'X-Api-Signature: xxx' \
+--header 'app-token: xxx' \
+--header 'X-GW-Router-Addr: https://tf.jdy.com' \
+--data-row '
+{
+	"material_ids":[
+		{
+			"aux_prop_id":"10",
+			"material_id":"10"
+		}
+	]
+}'
 ```
 
 ### []()响应参数
@@ -436,38 +549,30 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 
 | 参数名称 | 参数类型 | 参数说明 |
 | --- | --- | --- |
-| count | string | 总条数 |
-| current_page_size | integer | 当前页条数 |
-| page | integer | 当前页码 |
-| page_size | integer | 每页条数 |
-| rows | List <Row> | 数据行 |
-| total_page | integer | 总页数 |
+| aux_prop_id | string | 辅助属性ID |
+| bom_list | List <bomList> | BOM集合 |
+| material_id | string | 产品ID |
 
-**Row**
+**bomList**
 
 | 参数名称 | 参数类型 | 参数说明 |
 | --- | --- | --- |
-| id | string | id |
-| name | string | 名称 |
-| number | string | 编码 |
+| id | string | BOM集合 |
+| name | string | BOM单编号 |
 
 #### []()响应示例
 
 ```
 {
 	"data":{
-		"count":"1",
-		"current_page_size":1,
-		"page":1,
-		"page_size":100,
-		"rows":[
+		"aux_prop_id":"10",
+		"bom_list":[
 			{
-				"id":"1",
-				"name":"名称",
-				"number":"编码"
+				"id":"10",
+				"name":"10"
 			}
 		],
-		"total_page":100
+		"material_id":"10"
 	},
 	"description":"success",
 	"errcode":0
@@ -482,9 +587,9 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 | 2000002000 | 系统错误,请到开发者社区提单反馈 | 开发者社区 |
 
  
-            上一篇：科目类别列表
+            上一篇：材料分录联动查询
            
-            下一篇：申请或释放网络锁
+            下一篇：生产任务单列表
             此文档是否对您有帮助？ 
 - ![](/static/img/1.6a1364d.png) 完全没帮助
 - ![](/static/img/2.8ec5c89.png) 没帮助
@@ -496,6 +601,7 @@ curl --location --request  get 'https://api.kingdee.com/jdy/v2/fi/voucher_type
 - [基本信息]()
 - [请求参数]()
 - [headers参数]()
+- [body参数]()
 - [请求示例]()
 - [响应参数]()
 - [响应示例]()
