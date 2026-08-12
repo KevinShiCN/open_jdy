@@ -26,6 +26,31 @@
       ]
     },
     {
+      "text": "审批流",
+      "isParent": true,
+      "isLeaf": false,
+      "children": [
+        {
+          "text": "查询审批记录",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "同意驳回接口",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
+          "text": "审批流撤回",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        }
+      ]
+    },
+    {
       "text": "进销存云",
       "isParent": true,
       "isLeaf": false,
@@ -337,6 +362,19 @@
               ]
             },
             {
+              "text": "销售税票登记",
+              "isParent": false,
+              "isLeaf": false,
+              "children": [
+                {
+                  "text": "销售税票登记列表接口",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            },
+            {
               "text": "委托代销结算单",
               "isParent": false,
               "isLeaf": false,
@@ -455,6 +493,12 @@
                 },
                 {
                   "text": "销售订单详情",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "text": "销售订单锁库",
                   "isParent": false,
                   "isLeaf": true,
                   "children": []
@@ -2060,6 +2104,12 @@
                   "isParent": false,
                   "isLeaf": true,
                   "children": []
+                },
+                {
+                  "text": "零售结存单详情",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
                 }
               ]
             },
@@ -2247,6 +2297,12 @@
                   "children": []
                 },
                 {
+                  "text": "根据产品查询BOM",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
                   "text": "生产任务单列表",
                   "isParent": false,
                   "isLeaf": true,
@@ -2377,6 +2433,12 @@
                   "isParent": false,
                   "isLeaf": true,
                   "children": []
+                },
+                {
+                  "text": "委外产品退货单保存",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
                 }
               ]
             }
@@ -2389,6 +2451,38 @@
       "isParent": true,
       "isLeaf": false,
       "children": [
+        {
+          "text": "价格资料",
+          "isParent": false,
+          "isLeaf": false,
+          "children": [
+            {
+              "text": "商品价格资料",
+              "isParent": false,
+              "isLeaf": false,
+              "children": [
+                {
+                  "text": "客户价格资料列表",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "text": "客户价格资料详情",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                },
+                {
+                  "text": "客户价格资料新增",
+                  "isParent": false,
+                  "isLeaf": true,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
         {
           "text": "商品资料",
           "isParent": false,
@@ -3196,6 +3290,12 @@
       "isLeaf": false,
       "children": [
         {
+          "text": "申请或释放网络锁",
+          "isParent": false,
+          "isLeaf": true,
+          "children": []
+        },
+        {
           "text": "变动项类型",
           "isParent": false,
           "isLeaf": true,
@@ -3321,6 +3421,33 @@
       "category": "指导文档",
       "title": "隐私数据解密",
       "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=d7046d818dc111ee860d0fedad361070"
+    },
+    {
+      "path": [
+        "审批流",
+        "查询审批记录"
+      ],
+      "category": "审批流",
+      "title": "查询审批记录",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=00d889b9030711ef90806d0bbde1edd6"
+    },
+    {
+      "path": [
+        "审批流",
+        "同意驳回接口"
+      ],
+      "category": "审批流",
+      "title": "同意驳回接口",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=00dc0c2a030711ef9080533aa6cdbc22"
+    },
+    {
+      "path": [
+        "审批流",
+        "审批流撤回"
+      ],
+      "category": "审批流",
+      "title": "审批流撤回",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=efc60a7a2f0511ef9b205b8eadc47cba"
     },
     {
       "path": [
@@ -3711,6 +3838,17 @@
       "path": [
         "进销存云",
         "销售单据",
+        "销售税票登记",
+        "销售税票登记列表接口"
+      ],
+      "category": "进销存云 > 销售单据 > 销售税票登记",
+      "title": "销售税票登记列表接口",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=6a4ea017fd1a11f0891c4149707ffffa"
+    },
+    {
+      "path": [
+        "进销存云",
+        "销售单据",
         "委托代销结算单",
         "委托代销结算详情"
       ],
@@ -3871,6 +4009,17 @@
       "category": "进销存云 > 销售单据 > 销售订单",
       "title": "销售订单详情",
       "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=9e6e7132712511eda0b3b9a1d236ec55"
+    },
+    {
+      "path": [
+        "进销存云",
+        "销售单据",
+        "销售订单",
+        "销售订单锁库"
+      ],
+      "category": "进销存云 > 销售单据 > 销售订单",
+      "title": "销售订单锁库",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=9e706d03712511eda0b37dc44e0f958f"
     },
     {
       "path": [
@@ -5861,6 +6010,17 @@
       "path": [
         "零售云",
         "门店管理",
+        "零售结存单",
+        "零售结存单详情"
+      ],
+      "category": "零售云 > 门店管理 > 零售结存单",
+      "title": "零售结存单详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=e546814d4a7811f18fd13b3c7e606831"
+    },
+    {
+      "path": [
+        "零售云",
+        "门店管理",
         "门店保存"
       ],
       "category": "零售云 > 门店管理",
@@ -6120,6 +6280,17 @@
         "生产云",
         "生产管理",
         "生产任务单",
+        "根据产品查询BOM"
+      ],
+      "category": "生产云 > 生产管理 > 生产任务单",
+      "title": "根据产品查询BOM",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=67fd31e275ab11f18fd1eff7c05e0e50"
+    },
+    {
+      "path": [
+        "生产云",
+        "生产管理",
+        "生产任务单",
         "生产任务单列表"
       ],
       "category": "生产云 > 生产管理 > 生产任务单",
@@ -6279,6 +6450,50 @@
       "category": "生产云 > 委外管理 > 委外产品退货单",
       "title": "委外产品退货单详情",
       "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=74897f1ae4cd11ed840835de1baf5bb9"
+    },
+    {
+      "path": [
+        "生产云",
+        "委外管理",
+        "委外产品退货单",
+        "委外产品退货单保存"
+      ],
+      "category": "生产云 > 委外管理 > 委外产品退货单",
+      "title": "委外产品退货单保存",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=6801c5c375ab11f18fd12f3faf370c88"
+    },
+    {
+      "path": [
+        "基础资料",
+        "价格资料",
+        "商品价格资料",
+        "客户价格资料列表"
+      ],
+      "category": "基础资料 > 价格资料 > 商品价格资料",
+      "title": "客户价格资料列表",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=5d76cf35529411f0975aa9e5d751fff1"
+    },
+    {
+      "path": [
+        "基础资料",
+        "价格资料",
+        "商品价格资料",
+        "客户价格资料详情"
+      ],
+      "category": "基础资料 > 价格资料 > 商品价格资料",
+      "title": "客户价格资料详情",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=5d796746529411f0975a9b763852f6a8"
+    },
+    {
+      "path": [
+        "基础资料",
+        "价格资料",
+        "商品价格资料",
+        "客户价格资料新增"
+      ],
+      "category": "基础资料 > 价格资料 > 商品价格资料",
+      "title": "客户价格资料新增",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=da2535950b0c11f0a81f57ca100084df"
     },
     {
       "path": [
@@ -7268,6 +7483,15 @@
     {
       "path": [
         "系统设置",
+        "申请或释放网络锁"
+      ],
+      "category": "系统设置",
+      "title": "申请或释放网络锁",
+      "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=1718d223fa8d11ef9452d3d4efd9788e"
+    },
+    {
+      "path": [
+        "系统设置",
         "变动项类型"
       ],
       "category": "系统设置",
@@ -7410,6 +7634,6 @@
       "url": "https://open.jdy.com/#/files/api/detail?index=3&categrayId=3cc8ee9a663e11eda5c84b5d383a2b93&id=5519cba46cb811eebcbf655356d50503"
     }
   ],
-  "total": 382,
+  "total": 394,
   "partial": false
 }
