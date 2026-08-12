@@ -19,6 +19,7 @@ const DIFF_FILE = join(OUT_DIR, 'nav-diff.json');
 const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
 const SAVE_INTERVAL = 10; // 每 N 页保存一次
 const RESUME = process.argv.includes('--resume');
+const LOCAL_MODE = process.argv.includes('--local'); // 独立 headless 浏览器（绕过 CDP 单例）
 
 /** 持久化当前采集结果 */
 function saveProgress(tree, flatList, partial = true) {
@@ -53,9 +54,13 @@ async function main() {
     console.log(`fresh 模式: 已备份旧导航 ${previousData.pages?.length || 0} 页`);
   }
 
-  const browser = await chromium.connectOverCDP(CDP_URL);
-  const context = browser.contexts()[0];
-  if (!context) throw new Error(`CDP 未提供浏览器上下文: ${CDP_URL}`);
+  const browser = LOCAL_MODE
+    ? await chromium.launch({ headless: true })
+    : await chromium.connectOverCDP(CDP_URL);
+  const context = LOCAL_MODE
+    ? await browser.newContext()
+    : browser.contexts()[0];
+  if (!context) throw new Error(`CDP 未提供浏览器上下文: ${LOCAL_MODE ? 'local' : CDP_URL}`);
   const page = await context.newPage();
 
   // 崩溃时保存已有结果

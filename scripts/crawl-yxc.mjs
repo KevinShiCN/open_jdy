@@ -14,6 +14,7 @@ const DOCS_DIR = join(import.meta.dirname, '..', 'docs', '金蝶云星辰');
 const META_DIR = join(import.meta.dirname, '..', '_meta', '金蝶云星辰');
 const CONCURRENCY = parseInt(process.argv.find((_, i, a) => a[i-1] === '--concurrency') || '1');
 const CATEGORY_FILTER = process.argv.find((_, i, a) => a[i-1] === '--category') || '';
+const EXCLUDE_FILTER = (process.argv.find((_, i, a) => a[i-1] === '--exclude') || '').split(',').filter(Boolean);
 const START_INDEX = parseInt(process.argv.find((_, i, a) => a[i-1] === '--start') || '0');
 const END_INDEX = parseInt(process.argv.find((_, i, a) => a[i-1] === '--end') || '999999');
 const FORCE_WRITE = process.argv.includes('--force');
@@ -22,6 +23,7 @@ const MAX_RETRIES = 2;
 const DELAY_MS = 800;
 const CONSECUTIVE_FAIL_LIMIT = 5;
 const CDP_URL = process.env.PLAYWRIGHT_CDP_URL || 'http://127.0.0.1:18932';
+const LOCAL_MODE = process.argv.includes('--local'); // 独立 headless 浏览器（绕过 CDP 单例）
 
 // 内容哈希（排除 crawl_date 和 last_update，避免日期变化产生误报）
 function contentHash(text) {
@@ -225,6 +227,9 @@ async function main() {
   if (CATEGORY_FILTER) {
     tasks = tasks.filter(t => t.category === CATEGORY_FILTER);
   }
+  if (EXCLUDE_FILTER.length) {
+    tasks = tasks.filter(t => !EXCLUDE_FILTER.includes(t.category));
+  }
   // 支持分片：--start 0 --end 50
   tasks = tasks.slice(START_INDEX, END_INDEX);
 
@@ -233,7 +238,9 @@ async function main() {
     console.log(`Batch: [${START_INDEX}, ${END_INDEX})`);
   }
 
-  const browser = await chromium.connectOverCDP(CDP_URL);
+  const browser = LOCAL_MODE
+    ? await chromium.launch({ headless: true })
+    : await chromium.connectOverCDP(CDP_URL);
   const results = await runPool(tasks, browser, CONCURRENCY);
 
   const stats = { new: 0, updated: 0, unchanged: 0, skip: 0, fail: 0 };
